@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand">
+    <div class="navbar-brand">
+        <i href="#" class="fa fa-building fa-2x"></i>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+            <div class="nav-item">
+                    <a class="icon fa-angle-right nav-link" (click)="onClick(-1)">root</a>
+            </div>
+            <div class="nav-item" *ngFor="let path of pathList; index as i">
+                <a class="icon fa-angle-right nav-link" (click)="onClick(i)">{{ path }}</a>
+            </div>
+        </div>
+    </div>
+</nav>
