@@ -26,7 +26,6 @@ public class MyApp extends ResourceConfig {
             @Override
             protected void configure() {
                 bindFactory(SftpProvider.class).to(SftpService.class).in(Singleton.class);
-//                bind(new SftpService()).to(SftpService.class);
             }
         });
     }
