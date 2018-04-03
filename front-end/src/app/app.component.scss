@@ -11,7 +11,7 @@ $navigation-height: 12%;
 #content {
     height: calc(100% - #{$navigation-height});
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 40% 60%;
 
     .left {
         background: #edefee;

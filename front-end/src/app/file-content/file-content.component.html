@@ -1,5 +1,9 @@
 <div class="field">
-  <div class="loader"></div>
+  <ace-editor id="editor" 
+    [(text)]="fileContent"
+    #editor 
+    ></ace-editor>
+  <!-- <div class="loader"></div> -->
 </div>
 <!-- <p class="quote">
   There is no file opened

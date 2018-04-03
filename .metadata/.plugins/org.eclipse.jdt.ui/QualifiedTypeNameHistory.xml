@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.carleton.comp3000.resources.FilesResource"/>
+<fullyQualifiedTypeName name="com.carleton.comp3000.resources.ContentFileResource"/>
+<fullyQualifiedTypeName name="com.google.inject.Singleton"/>
+<fullyQualifiedTypeName name="com.google.inject.Inject"/>
+<fullyQualifiedTypeName name="java.util.HashSet"/>
+<fullyQualifiedTypeName name="javax.inject.Singleton"/>
+<fullyQualifiedTypeName name="org.glassfish.jersey.server.ResourceConfig"/>
+<fullyQualifiedTypeName name="com.carleton.comp3000.modules.SftpBinder"/>
+<fullyQualifiedTypeName name="com.carleton.comp3000.services.SftpService"/>
+</qualifiedTypeNameHistroy>

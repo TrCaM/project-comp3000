@@ -1,29 +1,24 @@
 <div class="folder1">
     <button 
         type="button" 
-        class="btn btn1" 
+        class="btn" 
         [ngClass]="{'directory': entry.isDir}" 
         data-toggle="modal" 
         data-target="#loading"
         (dblclick)="onSelect()"
         >
-        <div class="row">
-            <div class="col-3">
-                <img 
-                    class="float-left" 
-                    [src]="imgPath"
-                    alt="FolderIcon">
+        <div class="button">
+            <img 
+                class="image" 
+                [src]="imgPath"
+                alt="FolderIcon">
+    
+            <div class="name"> {{ entry.name }}</div>
+            <div class="size">
+                <em>{{ entry.size }} </em>
             </div>
-            <div class="col-8">
-                <div class="row1"> {{ entry.name }}</div>
-                <div class="row">
-                    <div class="col">
-                        <em>{{ entry.size }} </em>
-                    </div>
-                    <div class="col">
-                        <em>Modified: {{ entry.lastModified | date:'short' }} </em>
-                    </div>
-                </div>
+            <div class="date">
+                <em>Modified: {{ entry.lastModified | date:'short' }} </em>
             </div>
         </div>
     </button>

@@ -1,3 +1,4 @@
+import { FileContentComponent } from './../file-content/file-content.component';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,6 +13,7 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class MinixClientService {
   directoryFetched = new Subject();
+  fileContentLoaded = new Subject<string>();
 
   readonly baseDirUrl = 'http://localhost:8080/minix-web-service/webapi/files';
   readonly baseContentUrl = 'http://localhost:8080/minix-web-service/webapi/content';
@@ -32,19 +34,23 @@ export class MinixClientService {
             this._entries = this.extractChildren(directory);
             this.directoryFetched.next();
           }
-      );
+        );
     }
   }
 
-  // cat(url: string) {
-  //   return this.http.get<Directory>(url)
-  //     .subscribe(
-  //       (directory) => {
-  //         this._currentDir = directory;
-  //         this._entries = this.extractChildren(directory);
-  //       }
-  //     );
-  // }
+  fetchFile(url: string) {
+    return this.http.get(url, { responseType: 'blob' })
+      .subscribe(
+        (blob: Blob) => {
+          const event = this.fileContentLoaded;
+          const reader = new FileReader();
+          reader.onload = function () {
+            event.next(reader.result);
+          };
+          reader.readAsText(blob);
+        }
+      );
+  }
 
   extractChildren(directory: Directory): BasicEntry[] {
     return directory.children
@@ -61,7 +67,7 @@ export class MinixClientService {
   }
 
   get currentDir() {
-    return {...this._currentDir};
+    return { ...this._currentDir };
   }
 
   get entries() {
@@ -69,6 +75,6 @@ export class MinixClientService {
   }
 
   get pathList(): string[] {
-    return this._currentDir.absolutePath.split('/').filter( seg => seg.length !== 0);
+    return this._currentDir.absolutePath.split('/').filter(seg => seg.length !== 0);
   }
 }

@@ -120,3 +120,1042 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.jst.j2ee.navigator.ui 4 0 2018-04-02 16:01:52.895
+!MESSAGE org.eclipse.core.internal.resources.ResourceException: Errors occurred while refreshing resources with the local file system.
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.eclipse.core.internal.resources.ResourceException: Errors occurred while refreshing resources with the local file system.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1064)
+	at org.eclipse.wst.common.internal.emfworkbench.WorkbenchResourceHelper.getOrCreateResource(WorkbenchResourceHelper.java:380)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getResource(EditModel.java:685)
+	at org.eclipse.wst.common.componentcore.internal.ArtifactEditModel.getResource(ArtifactEditModel.java:199)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryResource(EditModel.java:1519)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryRootObject(EditModel.java:1500)
+	at org.eclipse.wst.common.componentcore.ArtifactEdit.getContentModelRoot(ArtifactEdit.java:567)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.getRootObjects(FlexibleEMFModelManager.java:92)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.getModels(FlexibleEMFModelManager.java:57)
+	at org.eclipse.jst.j2ee.navigator.internal.EMFRootObjectProvider.getModels(EMFRootObjectProvider.java:58)
+	at org.eclipse.jst.j2ee.navigator.internal.LoadingDDJob.run(LoadingDDJob.java:52)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.eclipse.core.internal.resources.ResourceException: Errors occurred while refreshing resources with the local file system.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refreshResource(FileSystemResourceManager.java:974)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.refresh(FileSystemResourceManager.java:954)
+	at org.eclipse.jst.j2ee.common.internal.impl.XMLResourceImpl.loadExisting(XMLResourceImpl.java:322)
+	at org.eclipse.wst.common.internal.emf.resource.TranslatorResourceImpl.load(TranslatorResourceImpl.java:427)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.demandLoad(ProjectResourceSetImpl.java:811)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 12 more
+
+!ENTRY org.eclipse.wst.common.modulecore 4 0 2018-04-02 16:01:53.317
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.common.componentcore.internal.impl.ComponentCoreURIConverter.newPlatformURI(ComponentCoreURIConverter.java:102)
+	at org.eclipse.wst.common.componentcore.internal.impl.ComponentCoreURIConverter.access$0(ComponentCoreURIConverter.java:93)
+	at org.eclipse.wst.common.componentcore.internal.impl.ComponentCoreURIConverter$1.delegatedGetURI(ComponentCoreURIConverter.java:173)
+	at org.eclipse.emf.ecore.resource.impl.URIMappingRegistryImpl.getURI(URIMappingRegistryImpl.java:120)
+	at org.eclipse.emf.ecore.resource.impl.URIMappingRegistryImpl$URIMapImpl.getURI(URIMappingRegistryImpl.java:162)
+	at org.eclipse.jem.internal.util.emf.workbench.WorkspaceResourceHandler.getResource(WorkspaceResourceHandler.java:47)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResourceFromHandlers(ProjectResourceSetImpl.java:836)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.delegatedGetResource(ProjectResourceSetImpl.java:689)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1041)
+	at org.eclipse.wst.common.internal.emfworkbench.WorkbenchResourceHelper.getOrCreateResource(WorkbenchResourceHelper.java:380)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getResource(EditModel.java:685)
+	at org.eclipse.wst.common.componentcore.internal.ArtifactEditModel.getResource(ArtifactEditModel.java:199)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryResource(EditModel.java:1519)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryRootObject(EditModel.java:1500)
+	at org.eclipse.wst.common.componentcore.ArtifactEdit.getContentModelRoot(ArtifactEdit.java:567)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.getRootObjects(FlexibleEMFModelManager.java:92)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.editModelChanged(FlexibleEMFModelManager.java:154)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel$NotifyRunner.run(EditModel.java:1615)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.notifyListeners(EditModel.java:298)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.resourceChanged(EditModel.java:797)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext.notifyEditModels(EMFWorkbenchContext.java:278)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext.removedResource(EMFWorkbenchContext.java:341)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext$ResourceSetListener.notifyChanged(EMFWorkbenchContext.java:312)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.eNotify(ProjectResourceSetImpl.java:1274)
+	at org.eclipse.emf.common.notify.impl.NotificationChainImpl.dispatch(NotificationChainImpl.java:98)
+	at org.eclipse.emf.common.notify.impl.NotificationChainImpl.dispatch(NotificationChainImpl.java:86)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:718)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl$SynchronizedResourcesEList.remove(ProjectResourceSetImpl.java:497)
+	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:464)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl$SynchronizedResourcesEList.remove(ProjectResourceSetImpl.java:487)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredRemovedResources(ResourceSetWorkbenchEditSynchronizer.java:155)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredResources(ResourceSetWorkbenchEditSynchronizer.java:231)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:141)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.wst.common.modulecore 4 0 2018-04-02 16:01:53.335
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.wst.common.componentcore.internal.impl.ComponentCoreURIConverter.newPlatformURI(ComponentCoreURIConverter.java:102)
+	at org.eclipse.wst.common.componentcore.internal.impl.ComponentCoreURIConverter.access$0(ComponentCoreURIConverter.java:93)
+	at org.eclipse.wst.common.componentcore.internal.impl.ComponentCoreURIConverter$1.delegatedGetURI(ComponentCoreURIConverter.java:173)
+	at org.eclipse.emf.ecore.resource.impl.URIMappingRegistryImpl.getURI(URIMappingRegistryImpl.java:120)
+	at org.eclipse.emf.ecore.resource.impl.URIMappingRegistryImpl$URIMapImpl.getURI(URIMappingRegistryImpl.java:162)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.detectURIMapping(ProjectResourceSetImpl.java:761)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.createResource(ProjectResourceSetImpl.java:697)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ProjectResourceSetEditImpl.createResource(ProjectResourceSetEditImpl.java:49)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandCreateResource(ResourceSetImpl.java:243)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1053)
+	at org.eclipse.wst.common.internal.emfworkbench.WorkbenchResourceHelper.getOrCreateResource(WorkbenchResourceHelper.java:380)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getResource(EditModel.java:685)
+	at org.eclipse.wst.common.componentcore.internal.ArtifactEditModel.getResource(ArtifactEditModel.java:199)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryResource(EditModel.java:1519)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryRootObject(EditModel.java:1500)
+	at org.eclipse.wst.common.componentcore.ArtifactEdit.getContentModelRoot(ArtifactEdit.java:567)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.getRootObjects(FlexibleEMFModelManager.java:92)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.editModelChanged(FlexibleEMFModelManager.java:154)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel$NotifyRunner.run(EditModel.java:1615)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.notifyListeners(EditModel.java:298)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.resourceChanged(EditModel.java:797)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext.notifyEditModels(EMFWorkbenchContext.java:278)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext.removedResource(EMFWorkbenchContext.java:341)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext$ResourceSetListener.notifyChanged(EMFWorkbenchContext.java:312)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.eNotify(ProjectResourceSetImpl.java:1274)
+	at org.eclipse.emf.common.notify.impl.NotificationChainImpl.dispatch(NotificationChainImpl.java:98)
+	at org.eclipse.emf.common.notify.impl.NotificationChainImpl.dispatch(NotificationChainImpl.java:86)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:718)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl$SynchronizedResourcesEList.remove(ProjectResourceSetImpl.java:497)
+	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:464)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl$SynchronizedResourcesEList.remove(ProjectResourceSetImpl.java:487)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredRemovedResources(ResourceSetWorkbenchEditSynchronizer.java:155)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredResources(ResourceSetWorkbenchEditSynchronizer.java:231)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:141)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.wst.common.emfworkbench.integration 4 2 2018-04-02 16:01:53.348
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.wst.common.emfworkbench.integration".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.detectURIMapping(ProjectResourceSetImpl.java:761)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.createResource(ProjectResourceSetImpl.java:697)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ProjectResourceSetEditImpl.createResource(ProjectResourceSetEditImpl.java:49)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandCreateResource(ResourceSetImpl.java:243)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1053)
+	at org.eclipse.wst.common.internal.emfworkbench.WorkbenchResourceHelper.getOrCreateResource(WorkbenchResourceHelper.java:380)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getResource(EditModel.java:685)
+	at org.eclipse.wst.common.componentcore.internal.ArtifactEditModel.getResource(ArtifactEditModel.java:199)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryResource(EditModel.java:1519)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryRootObject(EditModel.java:1500)
+	at org.eclipse.wst.common.componentcore.ArtifactEdit.getContentModelRoot(ArtifactEdit.java:567)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.getRootObjects(FlexibleEMFModelManager.java:92)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.editModelChanged(FlexibleEMFModelManager.java:154)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel$NotifyRunner.run(EditModel.java:1615)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.notifyListeners(EditModel.java:298)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.resourceChanged(EditModel.java:797)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext.notifyEditModels(EMFWorkbenchContext.java:278)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext.removedResource(EMFWorkbenchContext.java:341)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext$ResourceSetListener.notifyChanged(EMFWorkbenchContext.java:312)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.eNotify(ProjectResourceSetImpl.java:1274)
+	at org.eclipse.emf.common.notify.impl.NotificationChainImpl.dispatch(NotificationChainImpl.java:98)
+	at org.eclipse.emf.common.notify.impl.NotificationChainImpl.dispatch(NotificationChainImpl.java:86)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:718)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl$SynchronizedResourcesEList.remove(ProjectResourceSetImpl.java:497)
+	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:464)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl$SynchronizedResourcesEList.remove(ProjectResourceSetImpl.java:487)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredRemovedResources(ResourceSetWorkbenchEditSynchronizer.java:155)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredResources(ResourceSetWorkbenchEditSynchronizer.java:231)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:141)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.wst.common.emfworkbench.integration 4 0 2018-04-02 16:01:53.354
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.detectURIMapping(ProjectResourceSetImpl.java:761)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.createResource(ProjectResourceSetImpl.java:697)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ProjectResourceSetEditImpl.createResource(ProjectResourceSetEditImpl.java:49)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandCreateResource(ResourceSetImpl.java:243)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1053)
+	at org.eclipse.wst.common.internal.emfworkbench.WorkbenchResourceHelper.getOrCreateResource(WorkbenchResourceHelper.java:380)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getResource(EditModel.java:685)
+	at org.eclipse.wst.common.componentcore.internal.ArtifactEditModel.getResource(ArtifactEditModel.java:199)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryResource(EditModel.java:1519)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.getPrimaryRootObject(EditModel.java:1500)
+	at org.eclipse.wst.common.componentcore.ArtifactEdit.getContentModelRoot(ArtifactEdit.java:567)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.getRootObjects(FlexibleEMFModelManager.java:92)
+	at org.eclipse.jst.j2ee.navigator.internal.FlexibleEMFModelManager.editModelChanged(FlexibleEMFModelManager.java:154)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel$NotifyRunner.run(EditModel.java:1615)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.notifyListeners(EditModel.java:298)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.EditModel.resourceChanged(EditModel.java:797)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext.notifyEditModels(EMFWorkbenchContext.java:278)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext.removedResource(EMFWorkbenchContext.java:341)
+	at org.eclipse.wst.common.internal.emfworkbench.EMFWorkbenchContext$ResourceSetListener.notifyChanged(EMFWorkbenchContext.java:312)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.eNotify(ProjectResourceSetImpl.java:1274)
+	at org.eclipse.emf.common.notify.impl.NotificationChainImpl.dispatch(NotificationChainImpl.java:98)
+	at org.eclipse.emf.common.notify.impl.NotificationChainImpl.dispatch(NotificationChainImpl.java:86)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.remove(NotifyingListImpl.java:718)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl$SynchronizedResourcesEList.remove(ProjectResourceSetImpl.java:497)
+	at org.eclipse.emf.common.util.AbstractEList.remove(AbstractEList.java:464)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl$SynchronizedResourcesEList.remove(ProjectResourceSetImpl.java:487)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredRemovedResources(ResourceSetWorkbenchEditSynchronizer.java:155)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredResources(ResourceSetWorkbenchEditSynchronizer.java:231)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:141)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:374)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1469)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:46)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.core.resources 2 2 2018-04-02 16:03:49.304
+!MESSAGE Save operation warnings.
+!SUBENTRY 1 org.eclipse.core.resources 2 234 2018-04-02 16:03:49.305
+!MESSAGE The project description file (.project) for 'minix-web-service-desktop' was missing.  This file contains important information about the project.  A new project description file has been created, but some information about the project may have been lost.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 16:04:38.135
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 16:04:47.040
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 16:04:58.971
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 16:05:17.679
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-02 16:06:27.654
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-02 16:06:27.662
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 16:13:28.522
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 16:13:35.959
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 19:45:50.376
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 21:41:16.276
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 21:41:34.953
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 21:55:58.550
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 21:58:15.967
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 22:35:15.922
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 23:01:51.401
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 23:11:42.695
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 23:13:17.091
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 23:13:40.956
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-02 23:22:57.627
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-02 23:22:57.633
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 23:27:53.453
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2018-04-02 23:27:59.145
+!MESSAGE Command not handled: org.eclipse.ui.navigate.forwardHistory
+!STACK 0
+org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled command org.eclipse.ui.navigate.forwardHistory
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:485)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:390)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.executeAction(EclipseCommand.java:89)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.doIt(EclipseCommand.java:77)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.execute(EclipseCommand.java:38)
+	at net.sourceforge.vrapper.vim.commands.CommandWrappers$1.execute(CommandWrappers.java:23)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:264)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:318)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:831)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:467)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:442)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:291)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:485)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:66)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6029)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5732)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1130)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1126)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1547)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4962)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:364)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4843)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5178)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2560)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3815)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 23:33:50.663
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2018-04-02 23:52:34.930
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:773)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:318)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:155)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete 'C:\Users\Tri Cao\Desktop\Project\Servers'.
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:139)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:443)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1785)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:760)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:318)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:155)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: C:\Users\Tri Cao\Desktop\Project\Servers\hotswap-agent.jar.
+java.nio.file.FileSystemException: C:\Users\Tri Cao\Desktop\Project\Servers\hotswap-agent.jar: The process cannot access the file because it is being used by another process.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
+	at java.nio.file.Files.deleteIfExists(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:220)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:248)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:137)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:443)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1785)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:760)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:318)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:155)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: C:\Users\Tri Cao\Desktop\Project\Servers.
+Contains: Could not delete 'C:\Users\Tri Cao\Desktop\Project\Servers'.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2018-04-02 23:52:34.931
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2018-04-02 23:52:34.931
+!MESSAGE Could not delete 'C:\Users\Tri Cao\Desktop\Project\Servers'.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:139)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:443)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1785)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:760)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:318)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:155)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: C:\Users\Tri Cao\Desktop\Project\Servers\hotswap-agent.jar.
+java.nio.file.FileSystemException: C:\Users\Tri Cao\Desktop\Project\Servers\hotswap-agent.jar: The process cannot access the file because it is being used by another process.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
+	at java.nio.file.Files.deleteIfExists(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:220)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:248)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:137)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:443)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1785)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:760)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:318)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:155)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+Contains: Could not delete: C:\Users\Tri Cao\Desktop\Project\Servers.
+!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2018-04-02 23:52:34.931
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2018-04-02 23:52:34.931
+!MESSAGE Could not delete: C:\Users\Tri Cao\Desktop\Project\Servers\hotswap-agent.jar.
+!STACK 0
+java.nio.file.FileSystemException: C:\Users\Tri Cao\Desktop\Project\Servers\hotswap-agent.jar: The process cannot access the file because it is being used by another process.
+
+	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
+	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
+	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
+	at java.nio.file.Files.deleteIfExists(Unknown Source)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:220)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:248)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:137)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:443)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:850)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1785)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:760)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:318)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:155)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:280)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:257)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:305)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:96)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:216)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2240)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2267)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:86)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2018-04-02 23:52:34.931
+!MESSAGE Could not delete: C:\Users\Tri Cao\Desktop\Project\Servers.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2018-04-02 23:52:34.931
+!MESSAGE Could not delete 'C:\Users\Tri Cao\Desktop\Project\Servers'.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-04-02 23:52:49.888
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-04-02 23:53:01.692
+!MESSAGE The Tomcat server configuration at \Servers\Tomcat v9.0 Server at localhost-config is missing. Check the server for errors.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-04-02 23:53:01.955
+!MESSAGE The Tomcat server configuration at \Servers\Tomcat v9.0 Server at localhost-config is missing. Check the server for errors.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-04-02 23:53:32.324
+!MESSAGE The Tomcat server configuration at \Servers\Tomcat v9.0 Server at localhost-config is missing. Check the server for errors.
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-04-02 23:54:05.009
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 23:58:51.945
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-02 23:59:13.463
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:06:07.157
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:06:07.171
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:06:08.252
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:06:08.261
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:06:28.754
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:06:28.828
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:06:28.864
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:07:17.236
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:07:17.252
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:07:44.255
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:07:44.272
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:07:50.101
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:07:50.115
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:08:14.104
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:08:14.163
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:08:14.178
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:08:24.292
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:08:24.321
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:13:14.186
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:13:14.200
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:13:14.223
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:13:16.107
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:13:16.115
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:14:56.488
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:14:56.504
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:14:56.516
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:19.446
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:19.473
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:19.487
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:19.893
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:20.028
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:40.970
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:40.981
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:40.999
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:42.267
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:15:42.282
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:15:49.115
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:16:07.422
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:16:07.443
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:16:12.052
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:16:36.901
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:16:36.947
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:16:49.730
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:16:49.753
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:16:53.219
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:16:59.276
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:16:59.291
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:17:04.463
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:17:04.480
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:19:40.321
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:20:37.071
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:20:37.087
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:22:32.977
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:22:33.003
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:22:41.921
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:22:41.939
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:23:43.879
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:23:43.909
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:24:35.206
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:26:16.151
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:26:16.168
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:30:39.473
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:30:39.492
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:31:25.446
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:31:25.466
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:34:30.891
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:34:45.276
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:34:52.384
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:34:52.402
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:36:59.150
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:36:59.165
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:36:59.184
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:40:55.937
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:40:55.947
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:41:02.308
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:41:02.319
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:41:53.263
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:42:51.480
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:46:59.098
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 00:46:59.112
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2018-04-03 00:47:10.389
+!MESSAGE Command not handled: org.eclipse.ui.navigate.forwardHistory
+!STACK 0
+org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled command org.eclipse.ui.navigate.forwardHistory
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:485)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:390)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.executeAction(EclipseCommand.java:89)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.doIt(EclipseCommand.java:77)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.execute(EclipseCommand.java:38)
+	at net.sourceforge.vrapper.vim.commands.CommandWrappers$1.execute(CommandWrappers.java:23)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:264)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:318)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:831)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:467)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:442)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:291)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:485)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:66)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6029)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5732)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1130)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1126)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1547)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4962)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:364)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4843)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5178)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2560)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3815)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:47:44.219
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:47:44.233
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:47:44.244
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:47:45.592
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:47:45.598
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:48:25.866
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:48:25.899
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:48:25.924
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:48:27.953
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-04-03 00:48:27.963
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2018-04-03 03:07:12.032 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data C:\Users\Tri Cao\Desktop\Project -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2018-04-03 03:07:19.378
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-03 03:07:19.378
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3647b274,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(pl.szpinda.plugin.tomcat.commands.tomcatStartStop,Tomcat start,stop,
+		,
+		Category(pl.szpinda.plugin.tomcat.commands.category.key,Tomcat keys,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2a10a99b,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-04-03 03:07:30.502
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Tri Cao'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2018-04-03 03:07:32.612
+!MESSAGE failed to load maven project for org.eclipse.ui.part.FileEditorInput(/project-backend/pom.xml)
+!STACK 1
+org.eclipse.core.runtime.CoreException: Could not read maven project
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:804)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1010)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:5065)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3716)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2424)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2298)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2211)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4154)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:5060)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1008)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:242)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:742)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1077)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Contains: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml: C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml (The system cannot find the file specified) @ 
+ for project  at C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml: C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml (The system cannot find the file specified) @ 
+ for project  at C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:794)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1010)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:5065)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3716)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2424)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2298)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2211)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4154)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:5060)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1008)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:242)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:742)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1077)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml: C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml (The system cannot find the file specified) @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:598)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:273)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 25 more
+!SUBENTRY 1 org.eclipse.m2e.core 4 0 2018-04-03 03:07:32.615
+!MESSAGE Could not read maven project
+!SUBENTRY 2 org.eclipse.m2e.core 4 0 2018-04-03 03:07:32.615
+!MESSAGE 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml: C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml (The system cannot find the file specified) @ 
+ for project  at C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml
+!STACK 0
+org.apache.maven.project.ProjectBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml: C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml (The system cannot find the file specified) @ 
+ for project  at C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:168)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:119)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.readMavenProject(MavenImpl.java:636)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:816)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$5.call(ProjectRegistryManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.execute(ProjectRegistryManager.java:967)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:811)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.readProjectWithDependencies(ProjectRegistryManager.java:794)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1010)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager$6.call(ProjectRegistryManager.java:1)
+	at com.google.common.cache.LocalCache$LocalManualCache$1.load(LocalCache.java:5065)
+	at com.google.common.cache.LocalCache$LoadingValueReference.loadFuture(LocalCache.java:3716)
+	at com.google.common.cache.LocalCache$Segment.loadSync(LocalCache.java:2424)
+	at com.google.common.cache.LocalCache$Segment.lockedGetOrLoad(LocalCache.java:2298)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2211)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:4154)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:5060)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.getMavenProject(ProjectRegistryManager.java:1008)
+	at org.eclipse.m2e.core.internal.project.registry.MavenProjectFacade.getMavenProject(MavenProjectFacade.java:242)
+	at org.eclipse.m2e.core.ui.internal.actions.SelectionUtil.getMavenProject(SelectionUtil.java:261)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor.readMavenProject(MavenPomEditor.java:742)
+	at org.eclipse.m2e.editor.pom.MavenPomEditor$5.run(MavenPomEditor.java:1077)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: org.apache.maven.model.building.ModelBuildingException: 1 problem was encountered while building the effective model
+[FATAL] Non-readable POM C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml: C:\Users\Tri Cao\Desktop\Project\project-backend\pom.xml (The system cannot find the file specified) @ 
+
+	at org.apache.maven.model.building.DefaultModelProblemCollector.newModelBuildingException(DefaultModelProblemCollector.java:197)
+	at org.apache.maven.model.building.DefaultModelBuilder.readModel(DefaultModelBuilder.java:598)
+	at org.apache.maven.model.building.DefaultModelBuilder.build(DefaultModelBuilder.java:273)
+	at org.apache.maven.project.DefaultProjectBuilder.build(DefaultProjectBuilder.java:161)
+	... 25 more
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 03:07:35.920
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 03:07:36.020
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-03 03:07:38.645
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-04-03 03:07:42.186
+!MESSAGE An internal error occurred during: "Validating project-backend".
+!STACK 0
+java.lang.IllegalStateException: Preference node "org.eclipse.wst.validation" has been removed.
+	at org.eclipse.core.internal.preferences.EclipsePreferences.checkRemoved(EclipsePreferences.java:164)
+	at org.eclipse.core.internal.resources.ProjectPreferences.internalGet(ProjectPreferences.java:429)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.get(EclipsePreferences.java:443)
+	at org.eclipse.wst.validation.internal.PreferencesWrapper$PreferencesWrapperPersistent.get(PreferencesWrapper.java:114)
+	at org.eclipse.wst.validation.internal.DisabledResourceManager.load(DisabledResourceManager.java:86)
+	at org.eclipse.wst.validation.internal.DisabledResourceManager.isDisabled(DisabledResourceManager.java:121)
+	at org.eclipse.wst.validation.internal.DisabledResourceManager.isDisabled(DisabledResourceManager.java:116)
+	at org.eclipse.wst.validation.internal.ValBuilderJob$Visitor.visit(ValBuilderJob.java:312)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:64)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:48)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.deltaBuild(ValBuilderJob.java:211)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.run(ValBuilderJob.java:179)
+	at org.eclipse.wst.validation.internal.ValBuilderJob.runInWorkspace(ValBuilderJob.java:126)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
