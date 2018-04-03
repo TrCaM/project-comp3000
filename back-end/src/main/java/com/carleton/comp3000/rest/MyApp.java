@@ -20,6 +20,7 @@ public class MyApp extends ResourceConfig {
                  "com.carleton.comp3000.enums",
                  "com.carleton.comp3000.exceptions",
                  "com.carleton.comp3000.models",
+                 "com.carleton.comp3000.filters",
                  "com.carleton.comp3000.services");
         register(new AbstractBinder() {
             @Override
