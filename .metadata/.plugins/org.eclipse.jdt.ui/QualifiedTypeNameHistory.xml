@@ -12,4 +12,16 @@
 <fullyQualifiedTypeName name="com.carleton.comp3000.models.ShortEntry"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="com.jcraft.jsch.SftpATTRS"/>
+<fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
+<fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.MultiPartFeature"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.FormDataParam"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.FormDataContentDisposition"/>
+<fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
+<fullyQualifiedTypeName name="com.carleton.comp3000.models.Message"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="javax.ws.rs.WebApplicationException"/>
 </qualifiedTypeNameHistroy>
