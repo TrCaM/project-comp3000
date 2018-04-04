@@ -1,6 +1,9 @@
 package com.carleton.comp3000.models;
 
 import com.carleton.comp3000.resources.FilesResource;
+
+import java.util.Date;
+
 import javax.ws.rs.core.UriInfo;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -12,7 +15,9 @@ public abstract class MinixEntry {
     protected String name;
     protected String parentUrl;
     protected boolean directory;
-    
+    protected long size;
+    protected long lastModified;
+
     public MinixEntry() {
         
     }
@@ -59,7 +64,7 @@ public abstract class MinixEntry {
             type = "file";
         }
 
-        return new ShortEntry(name, url, type);
+        return new ShortEntry(name, url, type, size, lastModified);
     }
 
     public String getUrl() {
@@ -83,4 +88,21 @@ public abstract class MinixEntry {
         }
     }
 
+	public long getSize() {
+		return size;
+	}
+
+	public void setSize(long size) {
+		this.size = size;
+	}
+
+	public long getLastModified() {
+		return lastModified;
+	}
+
+	public void setLastModified(long lastModified) {
+		this.lastModified = lastModified;
+	}
+   
 }
+

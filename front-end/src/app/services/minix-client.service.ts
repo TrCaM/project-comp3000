@@ -9,6 +9,7 @@ import { Directory } from './../models/directory.model';
 import { Entry } from '../models/entry.model';
 import { BasicEntry } from '../models/basic-entry.model';
 import { Subject } from 'rxjs/Subject';
+import { last } from 'rxjs/operators';
 
 @Injectable()
 export class MinixClientService {
@@ -58,12 +59,12 @@ export class MinixClientService {
       .map(this.toEntry);
   }
 
-  toEntry({ type, url }: { type: string, url: string }): BasicEntry {
+  toEntry({ size, type, url, lastModified }: { size: number, type: string, url: string, lastModified: number }): BasicEntry {
     const name = url.replace(/^.*[\\\/]/, '');
     const isDir = type === 'directory' ? true : false;
-    const size = 100;
-    const lastModified = new Date();
-    return new BasicEntry(name, url, isDir, size, lastModified);
+
+    const lastMDate = new Date(lastModified);
+    return new BasicEntry(name, url, isDir, size, lastMDate);
   }
 
   get currentDir() {

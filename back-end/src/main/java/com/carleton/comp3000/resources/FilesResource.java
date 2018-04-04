@@ -1,7 +1,7 @@
 package com.carleton.comp3000.resources;
 
 import com.carleton.comp3000.exceptions.ChannelNotConnectedException;
-import com.carleton.comp3000.models.ErrorMessage;
+import com.carleton.comp3000.models.Message;
 import com.carleton.comp3000.models.MinixEntry;
 import com.carleton.comp3000.services.MinixFileService;
 import com.carleton.comp3000.services.SftpService;
@@ -37,11 +37,11 @@ public class FilesResource {
         try {
             return minixService.getMinixEntry("/" + path);
         } catch (ChannelNotConnectedException e) {
-            ErrorMessage message = new ErrorMessage("Could not connect to the ssh server", 503, "https://github.com/TrCaM");
+            Message message = new Message("Could not connect to the ssh server", 503);
             Response response = Response.status(503).entity(message).build();
             throw new WebApplicationException(response);
         } catch (SftpException e) {
-            ErrorMessage message = new ErrorMessage("Path does not exist", 404, "https://github.com/TrCaM");
+            Message message = new Message("Path does not exist", 404);
             Response response = Response.status(404).entity(message).build();
             throw new WebApplicationException(response);
         }

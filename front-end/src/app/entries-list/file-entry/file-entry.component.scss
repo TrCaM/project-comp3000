@@ -23,6 +23,7 @@
                 grid-column: auto / auto;
             }
             .size {
+                color: dodgerblue;
                 grid-row: auto / auto;
                 grid-column: auto / auto;
             }
@@ -33,9 +34,14 @@
             }
         }
     }
-
     .directory {
         background-color: #FFE763;
+        .button {
+            .size {
+                color: red;
+                grid-row: auto / auto;
+                grid-column: auto / auto;
+            }
+        }
     }
-
 }

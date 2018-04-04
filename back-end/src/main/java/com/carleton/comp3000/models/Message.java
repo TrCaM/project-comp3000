@@ -3,20 +3,18 @@ package com.carleton.comp3000.models;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class ErrorMessage {
+public class Message {
 
     private String message;
     private int code;
-    private String documentation;
     
-    public ErrorMessage() {
+    public Message() {
         
     }
     
-    public ErrorMessage(String errorMessage, int errorCode, String documentation) {
+    public Message(String errorMessage, int errorCode) {
         message = errorMessage;
         code = errorCode;
-        this.documentation = documentation;
     }
 
     public String getMessage() {
@@ -34,14 +32,5 @@ public class ErrorMessage {
     public void setCode(int code) {
         this.code = code;
     }
-
-    public String getDocumentation() {
-        return documentation;
-    }
-
-    public void setDocumentation(String documentation) {
-        this.documentation = documentation;
-    }
-    
     
 }

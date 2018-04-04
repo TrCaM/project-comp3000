@@ -23,7 +23,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
   }
 
   onClick(i) {
-    const path = i >= 0 ? '/' : ('/' + this.pathList.slice(0, i + 1).join('/'));
+    const path = i < 0 ? '/' : ('/' + this.pathList.slice(0, i + 1).join('/'));
     this.minixClient.cd(this.minixClient.baseDirUrl + path);
   }
 

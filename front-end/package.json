@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.1",
+    "angular-pretty-size": "^0.0.3",
     "bootstrap": "4",
     "brace": "^0.11.1",
     "core-js": "^2.4.1",
@@ -30,6 +31,7 @@
     "ng2-ace-editor": "^0.3.4",
     "ng2-split-pane": "^1.4.0",
     "popper.js": "^1.14.1",
+    "prettysize": "^1.1.0",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },

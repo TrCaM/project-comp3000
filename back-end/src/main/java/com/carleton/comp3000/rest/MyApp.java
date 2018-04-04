@@ -5,9 +5,9 @@ import javax.inject.Singleton;
 import javax.ws.rs.ApplicationPath;
 
 import org.glassfish.hk2.utilities.binding.AbstractBinder;
+import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
-import com.carleton.comp3000.services.MinixFileService;
 import com.carleton.comp3000.services.SftpProvider;
 import com.carleton.comp3000.services.SftpService;
 
@@ -28,6 +28,7 @@ public class MyApp extends ResourceConfig {
                 bindFactory(SftpProvider.class).to(SftpService.class).in(Singleton.class);
             }
         });
+        register(MultiPartFeature.class);
     }
     
 }
