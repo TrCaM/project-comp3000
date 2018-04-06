@@ -25,7 +25,7 @@ export class FileEntryComponent implements OnInit {
 
   onSelect() {
     if (!this.entry.isDir) {
-        this.minixClient.fetchFile(this.entry.url);
+        this.minixClient.fetchFile(this.entry);
     } else {
         this.minixClient.cd(this.entry.url);
     }

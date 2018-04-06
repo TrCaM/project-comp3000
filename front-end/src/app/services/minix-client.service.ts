@@ -1,6 +1,7 @@
+import { File } from './../models/file.model';
 import { FileContentComponent } from './../file-content/file-content.component';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 // tslint:disable-next-line:import-blacklist
 import 'rxjs/Rx';
@@ -20,6 +21,7 @@ export class MinixClientService {
   readonly baseContentUrl = 'http://localhost:8080/minix-web-service/webapi/content';
 
   private _currentDir: Directory;
+  private _openedFile: File;
   private _entries: BasicEntry[];
 
   constructor(private http: HttpClient) {
@@ -39,18 +41,44 @@ export class MinixClientService {
     }
   }
 
-  fetchFile(url: string) {
-    return this.http.get(url, { responseType: 'blob' })
+  fetchFile(entry: BasicEntry) {
+    this._openedFile = File.cloneFrom(entry);
+    this.loadContent();
+  }
+
+  loadContent() {
+    const service = this;
+    this.http.get(this._openedFile.url, { responseType: 'blob' })
       .subscribe(
         (blob: Blob) => {
           const event = this.fileContentLoaded;
           const reader = new FileReader();
           reader.onload = function () {
+            service._openedFile.content = reader.result;
             event.next(reader.result);
           };
           reader.readAsText(blob);
         }
       );
+  }
+
+  saveFileContent(fileContent: string) {
+    console.log('here');
+    // Prepare the blob of file
+    const blob = new Blob([fileContent], {type: 'application/octet-stream'});
+    // Prepare form data object
+    const formData = new FormData();
+    formData.append('file', blob, this._openedFile.name);
+    // Prepare header
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'multipart/form-data');
+    headers.append('Accept', 'application/json');
+    this.http.put(this._openedFile.url, formData, {headers: headers})
+      .subscribe(
+        (message) => {
+          console.log(message);
+        }
+     );
   }
 
   extractChildren(directory: Directory): BasicEntry[] {
@@ -73,6 +101,10 @@ export class MinixClientService {
 
   get entries() {
     return [...this._entries];
+  }
+
+  get currentFile() {
+    return {...this._openedFile};
   }
 
   get pathList(): string[] {

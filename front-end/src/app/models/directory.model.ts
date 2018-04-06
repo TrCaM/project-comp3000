@@ -1,18 +1,22 @@
-import { Entry } from './entry.model';
+import { BasicEntry } from './basic-entry.model';
 
-export class Directory extends Entry {
+export class Directory extends BasicEntry {
 
-    children: {type: string, url: string}[];
+    children: { type: string, url: string }[];
+    absolutePath: string;
+    parentUrl: string;
 
     constructor(
-        path: string,
+        absolutePath: string,
         url: string,
         name: string,
         parentUrl: string,
         isDir: boolean,
         size: number,
         lastModified: Date) {
-        super(path,  url, name, parentUrl, isDir, size, lastModified);
+        super(name, url, isDir, size, lastModified);
+        this.absolutePath = absolutePath;
+        this.parentUrl = parentUrl;
     }
 
 }

@@ -1,6 +1,5 @@
 package com.carleton.comp3000.rest;
 
-
 import javax.inject.Singleton;
 import javax.ws.rs.ApplicationPath;
 
@@ -14,7 +13,7 @@ import com.carleton.comp3000.services.SftpService;
 @ApplicationPath("webapi")
 public class MyApp extends ResourceConfig {
 
-    public MyApp() {
+	public MyApp() {
         packages("com.carleton.comp3000.resources",
                  "com.carleton.comp3000.readwrite",
                  "com.carleton.comp3000.enums",
@@ -29,6 +28,7 @@ public class MyApp extends ResourceConfig {
             }
         });
         register(MultiPartFeature.class);
+        
     }
-    
+
 }

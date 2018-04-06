@@ -6,10 +6,7 @@ import com.carleton.comp3000.services.MinixFileService;
 import com.carleton.comp3000.services.SftpService;
 import com.jcraft.jsch.SftpException;
 
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
@@ -29,7 +26,6 @@ import org.glassfish.jersey.media.multipart.FormDataParam;
 
 @Path("/content")
 @Consumes(MediaType.APPLICATION_JSON)
-@Produces(MediaType.APPLICATION_OCTET_STREAM)
 public class ContentFileResource {
     
     private MinixFileService minixService;
@@ -44,17 +40,23 @@ public class ContentFileResource {
     public Response getFileContent(@PathParam("path") String path) throws WebApplicationException {
         try {
             InputStream fileContent = minixService.getFileContent("/" + path);
-            return Response.ok(fileContent)
+            return Response.ok(fileContent, MediaType.APPLICATION_OCTET_STREAM)
                     .header("Content-Disposition",
                             "attachment; filename=\"" + path.substring(path.lastIndexOf('/') + 1) + "\"" )
                     .build();
         } catch (ChannelNotConnectedException e) {
             Message message = new Message("Could not connect to the ssh server", 503);
-            Response response = Response.status(503).entity(message).build();
+            Response response = Response.status(503)
+            						    .entity(message)
+            						    .type(MediaType.APPLICATION_JSON)
+            						    .build();
             throw new WebApplicationException(response);
         } catch (SftpException e) {
-            Message message = new Message("Path does not exist", 404);
-            Response response = Response.status(404).entity(message).build();
+            Message message = new Message(e.getMessage(), 404);
+            Response response = Response.status(404)
+            							.entity(message)
+            							.type(MediaType.APPLICATION_JSON)
+            							.build();
             throw new WebApplicationException(response);
         }
     }
@@ -68,30 +70,17 @@ public class ContentFileResource {
     		@FormDataParam("file") InputStream fileContent,
     		@FormDataParam("file") FormDataContentDisposition fileDetail) throws WebApplicationException {
         try {
-        	BufferedReader reader = new BufferedReader(new InputStreamReader(fileContent));
-        	StringBuilder out = new StringBuilder();
-        	String line;
-        	while ((line = reader.readLine()) != null) {
-        	    out.append(line);   // add everything to StringBuilder 
-        	    // here you can have your logic of comparison.
-        	    if(line.toString().equals(".")) {
-        	        // do something
-        	    } 
-
-        	}
+        	minixService.updateFile("/" + path, fileContent);
             return Response.ok(new Message("File uploaded", 200)).build();
-//        } catch (ChannelNotConnectedException e) {
-//            Message message = new Message("Could not connect to the ssh server", 503);
-//            Response response = Response.status(503).entity(message).build();
-//            throw new WebApplicationException(response);
-//        } catch (SftpException e) {
-//            Message message = new Message("Path does not exist", 404);
-//            Response response = Response.status(404).entity(message).build();
-//            throw new WebApplicationException(response);
-        } catch (IOException e) {
+        } catch (ChannelNotConnectedException e) {
+            Message message = new Message("Could not connect to the ssh server", 503);
+            Response response = Response.status(503).entity(message).build();
+            throw new WebApplicationException(response);
+        } catch (SftpException e) {
+        	e.printStackTrace();
             Message message = new Message("Path does not exist", 404);
             Response response = Response.status(404).entity(message).build();
-			throw new WebApplicationException(response);
-		}
+            throw new WebApplicationException(response);
+        }
     }
 }

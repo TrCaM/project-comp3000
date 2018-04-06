@@ -36,7 +36,7 @@ public class MinixFileService {
     }
 
     public MinixEntry getMinixEntry(String path) throws ChannelNotConnectedException, SftpException {
-        ChannelSftp channel = service.getMinixChannel();
+        ChannelSftp channel = getConnectedSftpChannel();
         MinixEntry entry = null;
 
         SftpATTRS stat = channel.stat(path);
@@ -88,10 +88,29 @@ public class MinixFileService {
 
         return dir;
     }
+    
+    public void updateFile(String path, InputStream fileContent) throws ChannelNotConnectedException, SftpException {
+        ChannelSftp channel = getConnectedSftpChannel();
+        if (!channel.isConnected()) {
+        	throw new ChannelNotConnectedException();
+        }
+    	
+    	System.out.println(path);
+    	channel.put(fileContent, path, ChannelSftp.OVERWRITE);
+
+    }
 
     public InputStream getFileContent(String path) throws ChannelNotConnectedException, SftpException {
-        ChannelSftp channel = service.getMinixChannel();
-
+    	ChannelSftp channel = service.getMinixChannel();
         return channel.get(path);
+    }
+    
+    public ChannelSftp getConnectedSftpChannel() throws ChannelNotConnectedException {
+        ChannelSftp channel = service.getMinixChannel();
+        if (!channel.isConnected()) {
+        	throw new ChannelNotConnectedException();
+        }
+        
+        return channel;
     }
 }

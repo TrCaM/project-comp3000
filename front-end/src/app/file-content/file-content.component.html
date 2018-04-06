@@ -5,8 +5,12 @@
     ></ace-editor>
   <!-- <div class="loader"></div> -->
   <div class="toolbar">
-    <app-file-toolbar></app-file-toolbar>
+    <app-file-toolbar
+      (clearClicked)="clearEditor()"
+      (saveClicked)="saveFile()"
+      [dirty]="dirty"></app-file-toolbar>
   </div>
+  <footer class="footer">{{ fileName }} </footer>
 </div>
 <!-- <p class="quote">
   There is no file opened

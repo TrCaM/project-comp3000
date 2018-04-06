@@ -680,3 +680,284 @@ org.eclipse.core.runtime.CoreException: Could not read maven project
 2018-04-04 12:13:00,576 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2018-04-04 12:13:00,585 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-04-04 12:13:00,585 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 18:43:18,357 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 18:43:19,186 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 18:43:19,187 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 18:43:19,187 [Worker-134] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 18:43:48,707 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 18:43:48,709 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 18:43:48,710 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 18:43:48,711 [Worker-130] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 18:48:22,388 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 18:48:22,390 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 18:48:22,392 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 18:48:22,400 [Worker-138] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 18:53:18,367 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 18:53:18,369 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 18:53:18,371 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 18:53:18,380 [Worker-141] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:00:13,808 [Worker-145] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:00:13,816 [Worker-145] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:00:13,822 [Worker-145] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:00:13,828 [Worker-145] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:02:44,796 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:02:44,798 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:02:44,799 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:02:44,806 [Worker-147] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:07:38,131 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:07:38,139 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:07:38,145 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:07:38,151 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:08:43,179 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:08:43,181 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:08:43,184 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:08:43,192 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:09:25,023 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:09:25,025 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:09:25,032 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:09:25,037 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:10:10,526 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:10:10,528 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:10:10,530 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:10:10,538 [Worker-149] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:11:20,929 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:11:20,936 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:11:20,942 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:11:20,947 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:12:22,088 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:12:22,090 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:12:22,091 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:12:22,100 [Worker-152] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:12:28,295 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:12:28,303 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:12:28,312 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:12:28,318 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:13:02,636 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:13:02,638 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:13:02,639 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:13:02,644 [Worker-151] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:24:46,940 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:24:46,951 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:24:46,959 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:24:46,968 [Worker-157] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-04 19:24:49,788 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:24:49,790 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-04 19:24:49,792 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-04 19:24:49,799 [Worker-160] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 10:42:40,690 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-04-05 10:42:50,221 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 10:42:50,229 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 10:42:50,231 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 10:42:50,232 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 11:19:00,217 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 11:19:00,841 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 11:19:00,843 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 11:19:00,843 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 11:22:07,302 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 11:22:07,304 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 11:22:07,306 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 11:22:07,306 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 12:03:36,667 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:03:36,669 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 12:03:36,671 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:03:36,679 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 12:04:09,106 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:04:09,107 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 12:04:09,109 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:04:09,118 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 12:04:44,802 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:04:44,804 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 12:04:44,810 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:04:44,814 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 12:13:20,623 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:13:20,624 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 12:13:20,626 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:13:20,631 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 12:41:07,057 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:41:07,059 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 12:41:07,067 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:41:07,075 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 12:41:16,975 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:41:16,977 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 12:41:16,978 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:41:16,983 [Worker-74] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 12:57:55,410 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:57:55,417 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 12:57:55,422 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:57:55,427 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 12:58:04,561 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:58:04,565 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 12:58:04,568 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 12:58:04,583 [Worker-90] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 13:02:48,056 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:02:48,062 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 13:02:48,068 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:02:48,073 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 13:02:59,639 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:02:59,642 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 13:02:59,644 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:02:59,670 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 13:06:13,300 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:06:13,397 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 13:06:13,403 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:06:13,409 [Worker-93] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 13:06:20,012 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:06:20,014 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 13:06:20,015 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:06:20,020 [Worker-89] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 13:06:51,160 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:06:51,166 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 13:06:51,194 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 13:06:51,234 [Worker-96] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 14:29:54,173 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 14:29:54,177 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 14:29:54,178 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 14:29:54,239 [Worker-123] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 14:37:38,315 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 14:37:38,340 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 14:37:38,352 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 14:37:38,366 [Worker-126] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 14:45:14,892 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 14:45:14,893 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 14:45:14,895 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 14:45:14,909 [Worker-133] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 14:55:40,220 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 14:55:40,239 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 14:55:40,252 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 14:55:40,284 [Worker-137] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 15:00:28,632 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 15:00:28,634 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 15:00:28,635 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 15:00:28,650 [Worker-135] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 15:21:09,162 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 15:21:09,169 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 15:21:09,175 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 15:21:09,180 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 15:29:56,654 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 15:29:56,656 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 15:29:56,656 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 15:29:56,662 [Worker-153] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 15:53:24,550 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 15:53:24,556 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 15:53:24,564 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 15:53:24,570 [Worker-167] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 16:00:02,039 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:00:02,041 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 16:00:02,042 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:00:02,048 [Worker-171] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 16:07:39,125 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:07:39,203 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 16:07:39,214 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:07:39,223 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 16:09:47,949 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:09:47,951 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 16:09:47,952 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:09:47,974 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 16:10:14,490 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:10:14,501 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 16:10:14,510 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:10:14,523 [Worker-174] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 16:10:33,132 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:10:33,135 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 16:10:33,137 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:10:33,166 [Worker-172] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 16:27:24,438 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:27:24,455 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 16:27:24,488 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:27:24,504 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 16:28:45,393 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:28:45,396 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 16:28:45,400 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:28:45,408 [Worker-181] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 16:32:53,216 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:32:53,223 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 16:32:53,229 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 16:32:53,235 [Worker-178] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 17:00:20,230 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 17:00:20,232 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 17:00:20,233 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 17:00:20,241 [Worker-187] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 17:00:49,775 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 17:00:49,782 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 17:00:49,787 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 17:00:49,794 [Worker-173] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 17:15:04,366 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 17:15:04,367 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 17:15:04,368 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 17:15:04,376 [Worker-177] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:03:55,788 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:03:55,791 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:03:55,802 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:03:55,807 [Worker-204] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:04:21,446 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:04:21,448 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:04:21,449 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:04:21,462 [Worker-207] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:06:17,028 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:06:17,035 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:06:17,040 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:06:17,045 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:06:33,004 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:06:33,006 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:06:33,007 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:06:33,013 [Worker-210] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:06:53,025 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:06:53,032 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:06:53,037 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:06:53,042 [Worker-213] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:06:58,983 [Worker-209] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:06:58,984 [Worker-209] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:06:58,985 [Worker-209] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:06:58,991 [Worker-209] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:13:00,213 [Worker-214] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:13:00,220 [Worker-214] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:13:00,226 [Worker-214] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:13:00,232 [Worker-214] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:26:31,633 [Worker-219] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:26:31,635 [Worker-219] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:26:31,636 [Worker-219] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:26:31,642 [Worker-219] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:29:57,539 [Worker-218] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:29:57,541 [Worker-218] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:29:57,548 [Worker-218] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:29:57,553 [Worker-218] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:44:38,203 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:44:38,204 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:44:38,205 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:44:38,212 [Worker-212] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 19:49:09,315 [Worker-221] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:49:09,321 [Worker-221] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 19:49:09,327 [Worker-221] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 19:49:09,333 [Worker-221] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 20:02:52,747 [Worker-219] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:02:52,749 [Worker-219] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 20:02:52,750 [Worker-219] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:02:52,755 [Worker-219] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 20:04:11,413 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:04:11,425 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 20:04:11,431 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:04:11,437 [Worker-232] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 20:07:02,522 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:07:02,524 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 20:07:02,525 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:07:02,531 [Worker-235] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 20:30:07,416 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:30:07,419 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 20:30:07,426 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:30:07,430 [Worker-225] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 20:32:27,956 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:32:27,957 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 20:32:27,959 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:32:27,965 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 20:40:51,384 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:40:51,390 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 20:40:51,396 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 20:40:51,401 [Worker-240] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 21:23:10,024 [Worker-251] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 21:23:10,026 [Worker-251] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 21:23:10,027 [Worker-251] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 21:23:10,032 [Worker-251] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources
+2018-04-05 21:23:23,640 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 21:23:23,647 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-04-05 21:23:23,653 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-05 21:23:23,658 [Worker-248] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Tri Cao\Desktop\Project\back-end\src\test\resources

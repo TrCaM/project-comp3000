@@ -1,12 +1,12 @@
 <div class="icon-bar">
-  <div class="item" href="#">
-    <i href="#" class="fa fa-save fa-2x" style="color: #800080"></i>
+  <div class="item" href="#" [ngClass]="{'disabled': !dirty}" (click)="onSave()">
+    <i href="#" class="fa fa-save fa-2x" style="color: orange"></i>
     <p>S</p>
     <p>A</p>
     <p>V</p>
     <p>E</p>
   </div>
-  <div class="item" href="#">
+  <div class="item" href="#" (click)="onClear()">
     <i href="#" class="fa fa-ban fa-2x" style="color: red"></i>
     <p>C</p>
     <p>L</p>
@@ -14,7 +14,7 @@
     <p>A</p>
     <p>R</p>
   </div>
-  <div class="item" href="#">
+  <div class="item" href="#" [ngClass]="{'disabled': !dirty}" (click)="onReload()">
     <i href="#" class="fa fa-retweet fa-2x" style="color: #2DCB70"></i>
     <p>R</p>
     <p>E</p>

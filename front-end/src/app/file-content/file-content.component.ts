@@ -16,31 +16,62 @@ import { AceEditorComponent } from 'ng2-ace-editor';
 export class FileContentComponent implements OnInit, OnDestroy {
   @ViewChild('editor') editor: AceEditorComponent;
   fileContent: string;
+  fileName: string;
+  dirty: boolean;
+  
+  private shouldDirty: boolean;
   fileFetchedSubscription: Subscription;
 
   constructor(private minixClient: MinixClientService) { }
 
   ngOnInit() {
     this.setupEditor();
+    this.dirty = false;
+    this.shouldDirty = true;
 
     this.fileFetchedSubscription = this.minixClient.fileContentLoaded.subscribe(
       (content) => {
         this.fileContent = content;
+        this.fileName = this.minixClient.currentFile.url.replace(this.minixClient.baseContentUrl, '');
+        this.editor.getEditor().focus();
+        this.markClean();
       }
     );
+
+    this.editor.getEditor().on('input', () =>  {
+      // input is async event, which fires after any change events
+      this.dirty = this.shouldDirty;
+      if (!this.shouldDirty) {
+        this.shouldDirty = true;
+      }
+    });
   }
 
   setupEditor() {
     this.editor.setTheme('clouds');
 
     this.editor.getEditor().setOptions({
-        enableBasicAutocompletion: true
+      enableBasicAutocompletion: true
     });
 
     this.editor.setMode('c_cpp');
 
   }
 
+  clearEditor() {
+    this.fileContent = '';
+    this.editor.getEditor().focus();
+  }
+
+  saveFile() {
+    this.minixClient.saveFileContent(this.fileContent);
+    this.editor.getEditor().focus();
+    this.dirty = false;
+  }
+
+  markClean() {
+    this.shouldDirty = false;
+  }
 
   ngOnDestroy() {
 

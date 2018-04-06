@@ -1859,3 +1859,215 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-04 12:45:16.257
 !MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-04 18:41:33.118
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-04 18:43:13.261
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-04 18:43:13.269
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-04 18:56:48.976
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-04 18:56:48.984
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+!SESSION 2018-04-05 10:37:53.064 -----------------------------------------------
+eclipse.buildId=4.7.2.M20171130-0510
+java.version=1.8.0_161
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2018-04-05 10:42:26.992
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-04-05 10:42:26.992
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@490e1017,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(pl.szpinda.plugin.tomcat.commands.tomcatStartStop,Tomcat start,stop,
+		,
+		Category(pl.szpinda.plugin.tomcat.commands.category.key,Tomcat keys,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2ddb260e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-04-05 10:42:41.887
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Tri Cao'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 10:42:47.569
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 10:54:11.818
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 11:04:53.491
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 11:06:11.733
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 11:08:24.778
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 11:08:36.017
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-05 11:14:56.668
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-05 11:14:56.676
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 12:01:05.604
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 12:01:57.346
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 12:09:40.086
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 12:36:18.179
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-05 12:55:47.879
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2018-04-05 12:55:47.886
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 12:58:19.163
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 13:04:58.803
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 13:04:58.824
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-04-05 13:06:42.684
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY net.sourceforge.vrapper.eclipse 4 0 2018-04-05 14:47:58.603
+!MESSAGE Command not handled: org.eclipse.ui.navigate.forwardHistory
+!STACK 0
+org.eclipse.core.commands.NotEnabledException: Trying to execute the disabled command org.eclipse.ui.navigate.forwardHistory
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:485)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:487)
+	at org.eclipse.e4.core.commands.internal.HandlerServiceImpl.executeHandler(HandlerServiceImpl.java:210)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.executeCommand(LegacyHandlerService.java:390)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.executeAction(EclipseCommand.java:89)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.doIt(EclipseCommand.java:77)
+	at net.sourceforge.vrapper.eclipse.commands.EclipseCommand.execute(EclipseCommand.java:38)
+	at net.sourceforge.vrapper.vim.commands.CommandWrappers$1.execute(CommandWrappers.java:23)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.executeCommand(CommandBasedMode.java:264)
+	at net.sourceforge.vrapper.vim.modes.CommandBasedMode.handleKey(CommandBasedMode.java:318)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey0(DefaultEditorAdaptor.java:831)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKeyOffRecord(DefaultEditorAdaptor.java:467)
+	at net.sourceforge.vrapper.vim.DefaultEditorAdaptor.handleKey(DefaultEditorAdaptor.java:442)
+	at net.sourceforge.vrapper.eclipse.interceptor.VimInputInterceptorFactory$VimInputInterceptor.verifyKey(VimInputInterceptorFactory.java:291)
+	at org.eclipse.jface.text.TextViewer$VerifyKeyListenersManager.verifyKey(TextViewer.java:485)
+	at org.eclipse.swt.custom.StyledTextListener.handleEvent(StyledTextListener.java:66)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:802)
+	at org.eclipse.swt.custom.StyledText.handleKeyDown(StyledText.java:6029)
+	at org.eclipse.swt.custom.StyledText.lambda$1(StyledText.java:5732)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1130)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1126)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1547)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4962)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:364)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4843)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5178)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2560)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3815)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 14:55:40.454
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 15:37:12.162
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 15:37:49.820
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-04-05 16:11:38.104
+!MESSAGE Server Tomcat v9.0 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-04-05 16:12:46.481
+!MESSAGE Server Tomcat v9.0 Server at localhost was unable to start within 45 seconds. If the server requires more time, try increasing the timeout in the server editor.
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-04-05 16:28:38.018
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-04-05 19:00:06.503
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-04-05 19:00:14.158
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-04-05 19:00:21.807
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-04-05 19:00:26.946
+!MESSAGE Port 8005 required by Tomcat v9.0 Server at localhost is already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.jst.server.tomcat.core 4 0 2018-04-05 19:01:07.593
+!MESSAGE Several ports (8005, 8080, 8009) required by Tomcat v9.0 Server at localhost are already in use. The server may already be running in another process, or a system process may be using the port. To start this server you will need to stop the other process or change the port number(s).
+
+!ENTRY org.eclipse.wst.server.core 4 0 2018-04-05 19:04:22.852
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 19:10:45.346
+!MESSAGE No .vrapperrc or _vrapperrc found.
+
+!ENTRY net.sourceforge.vrapper.eclipse 1 0 2018-04-05 20:05:20.723
+!MESSAGE No .vrapperrc or _vrapperrc found.
