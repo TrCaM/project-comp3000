@@ -1,4 +1,4 @@
-<div class="field">
+<div class="field" [ngClass]="{'disabled': !fileOpen}">
   <ace-editor id="editor" 
     [(text)]="fileContent"
     #editor 
@@ -10,7 +10,10 @@
       (saveClicked)="saveFile()"
       [dirty]="dirty"></app-file-toolbar>
   </div>
-  <footer class="footer">{{ fileName }} </footer>
+  <footer class="footer">
+    <span style="float: left; color: red; font-weight: bold" *ngIf="fileOpen && readOnly">-- Read Only --</span>
+    <span style="float: left; color: Green; font-weight: bold" *ngIf="fileOpen && !readOnly">--  Editable --</span>
+    <span style="float: right">{{ fileName }}</span></footer>
 </div>
 <!-- <p class="quote">
   There is no file opened

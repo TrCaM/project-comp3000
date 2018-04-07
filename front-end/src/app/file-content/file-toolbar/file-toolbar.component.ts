@@ -18,7 +18,6 @@ export class FileToolbarComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes): void {
-    console.log('dirty' + this.dirty);
   }
 
   onSave() {

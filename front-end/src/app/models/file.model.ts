@@ -9,11 +9,14 @@ export class File extends BasicEntry {
         url: string,
         isDir: boolean,
         size: number,
-        lastModified: Date) {
-        super(name, url, isDir, size, lastModified);
+        lastModified: Date,
+        permissions: number,
+        pString: string,
+        uid: number) {
+        super(name, url, isDir, size, lastModified, permissions, pString, uid);
     }
 
     static cloneFrom(e: BasicEntry): File {
-        return new File(e.name, e.url, e.isDir, e.size, e.lastModified);
+        return new File(e.name, e.url, e.isDir, e.size, e.lastModified, e.permissions, e.permissionsString, e.uid);
     }
 }

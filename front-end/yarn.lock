@@ -27,9 +27,15 @@
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^5.5.6"
 
-"@angular/animations@^5.2.0":
+"@angular/animations@^5.2.9":
   version "5.2.9"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.2.9.tgz#220db9fb5a52a193db0023d721b23ddd25a75770"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/cdk@^5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-5.2.4.tgz#c0a429a8710d8fedb157f546e21cb49d4335f7f7"
   dependencies:
     tslib "^1.7.1"
 
@@ -141,6 +147,12 @@
   version "5.2.9"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-5.2.9.tgz#4838bb6319c99e8f5beb08bdfb392ee9a1173766"
 
+"@angular/material@^5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/material/-/material-5.2.4.tgz#9e823798324283d23ea839156fac5bcb73443d55"
+  dependencies:
+    tslib "^1.7.1"
+
 "@angular/platform-browser-dynamic@^5.2.0":
   version "5.2.9"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-5.2.9.tgz#86075b7bb694861f722ceda29aae186b045c6b7d"
@@ -183,6 +195,19 @@
     source-map "^0.5.6"
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
+
+"@ngx-progressbar/core@4.1.1", "@ngx-progressbar/core@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@ngx-progressbar/core/-/core-4.1.1.tgz#31b7ffa9de1d94380819a94aa0a31cedb044f37c"
+  dependencies:
+    tslib "^1.7.1"
+
+"@ngx-progressbar/http@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@ngx-progressbar/http/-/http-4.1.1.tgz#c0618334cbd623ecba1ded1a1b21063617b6f309"
+  dependencies:
+    "@ngx-progressbar/core" "4.1.1"
+    tslib "^1.7.1"
 
 "@schematics/angular@0.3.2":
   version "0.3.2"

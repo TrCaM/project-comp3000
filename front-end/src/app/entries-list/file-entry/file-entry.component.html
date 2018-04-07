@@ -1,4 +1,4 @@
-<div class="folder1">
+<div class="folder1" [ngbTooltip]="entry.name" placement="right">
     <button 
         type="button" 
         class="btn" 
@@ -17,8 +17,11 @@
             <div class="size">
                 <em>{{ sizeString }} </em>
             </div>
+            <div class="permissions">
+                <em>{{ entry.permissionsString }}</em>
+            </div>
             <div class="date">
-                <em>Modified: {{ entry.lastModified | date:'short' }} </em>
+                <em> {{ entry.lastModified | date:'shortDate' }} </em>
             </div>
         </div>
     </button>

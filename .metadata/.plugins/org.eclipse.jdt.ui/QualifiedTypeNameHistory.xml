@@ -11,11 +11,9 @@
 <fullyQualifiedTypeName name="com.carleton.comp3000.services.SftpService"/>
 <fullyQualifiedTypeName name="com.carleton.comp3000.models.ShortEntry"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="com.jcraft.jsch.SftpATTRS"/>
 <fullyQualifiedTypeName name="javax.ws.rs.PUT"/>
 <fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.MultiPartFeature"/>
 <fullyQualifiedTypeName name="javax.ws.rs.Consumes"/>
-<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
 <fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.FormDataParam"/>
 <fullyQualifiedTypeName name="org.glassfish.jersey.media.multipart.FormDataContentDisposition"/>
 <fullyQualifiedTypeName name="javax.ws.rs.Produces"/>
@@ -24,5 +22,20 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="javax.ws.rs.WebApplicationException"/>
 <fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="javax.ws.rs.core.MediaType"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Callable"/>
+<fullyQualifiedTypeName name="java.net.Socket"/>
+<fullyQualifiedTypeName name="java.net.UnknownHostException"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="javax.swing.text.ChangedCharSetException"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="java.util.concurrent.ScheduledExecutorService"/>
+<fullyQualifiedTypeName name="java.util.Observable"/>
+<fullyQualifiedTypeName name="java.util.Observer"/>
+<fullyQualifiedTypeName name="com.carleton.comp3000.services.ServerAvailableChecker"/>
+<fullyQualifiedTypeName name="java.util.concurrent.Future"/>
+<fullyQualifiedTypeName name="com.carleton.comp3000.exceptions.ChannelNotConnectedException"/>
 <fullyQualifiedTypeName name="com.jcraft.jsch.ChannelSftp"/>
+<fullyQualifiedTypeName name="com.jcraft.jsch.SftpATTRS"/>
 </qualifiedTypeNameHistroy>

@@ -18,7 +18,9 @@ export class FileContentComponent implements OnInit, OnDestroy {
   fileContent: string;
   fileName: string;
   dirty: boolean;
-  
+  readOnly: boolean;
+  fileOpen: boolean;
+
   private shouldDirty: boolean;
   fileFetchedSubscription: Subscription;
 
@@ -28,13 +30,25 @@ export class FileContentComponent implements OnInit, OnDestroy {
     this.setupEditor();
     this.dirty = false;
     this.shouldDirty = true;
+    this.fileOpen = false;
+    this.readOnly = true;
 
     this.fileFetchedSubscription = this.minixClient.fileContentLoaded.subscribe(
       (content) => {
+        const file = this.minixClient.currentFile;
         this.fileContent = content;
-        this.fileName = this.minixClient.currentFile.url.replace(this.minixClient.baseContentUrl, '');
+        this.fileName = file.url.replace(this.minixClient.baseContentUrl, '');
+        this.fileOpen = true;
         this.editor.getEditor().focus();
         this.markClean();
+        // tslint:disable-next-line:no-bitwise
+        if (((file.permissions & 0o200) !== 0)) {
+          this.readOnly = false;
+          this.editor.getEditor().setReadOnly(false);
+        } else {
+          this.editor.getEditor().setReadOnly(true);
+          this.readOnly = true;
+        }
       }
     );
 
@@ -59,6 +73,9 @@ export class FileContentComponent implements OnInit, OnDestroy {
   }
 
   clearEditor() {
+    if (this.fileContent.length !== 0) {
+       this.dirty = true;
+    }
     this.fileContent = '';
     this.editor.getEditor().focus();
   }

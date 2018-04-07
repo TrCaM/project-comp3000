@@ -1,7 +1,7 @@
 import { File } from './../models/file.model';
 import { FileContentComponent } from './../file-content/file-content.component';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 // tslint:disable-next-line:import-blacklist
 import 'rxjs/Rx';
@@ -11,11 +11,13 @@ import { Entry } from '../models/entry.model';
 import { BasicEntry } from '../models/basic-entry.model';
 import { Subject } from 'rxjs/Subject';
 import { last } from 'rxjs/operators';
+import { MatDialog } from '@angular/material/dialog';
 
 @Injectable()
 export class MinixClientService {
   directoryFetched = new Subject();
   fileContentLoaded = new Subject<string>();
+  errorCaught = new Subject<string>();
 
   readonly baseDirUrl = 'http://localhost:8080/minix-web-service/webapi/files';
   readonly baseContentUrl = 'http://localhost:8080/minix-web-service/webapi/content';
@@ -30,12 +32,15 @@ export class MinixClientService {
 
   cd(url: string) {
     if (!this._currentDir || url !== this._currentDir.url) {
-      this.http.get<Directory>(url)
+      this.http.get<Directory>(url, {reportProgress: true})
         .subscribe(
           (directory) => {
             this._currentDir = directory;
             this._entries = this.extractChildren(directory);
             this.directoryFetched.next();
+          },
+          (error: HttpErrorResponse) => {
+            this.inspectError(error.error);
           }
         );
     }
@@ -48,7 +53,7 @@ export class MinixClientService {
 
   loadContent() {
     const service = this;
-    this.http.get(this._openedFile.url, { responseType: 'blob' })
+    this.http.get(this._openedFile.url, { responseType: 'blob'})
       .subscribe(
         (blob: Blob) => {
           const event = this.fileContentLoaded;
@@ -58,7 +63,10 @@ export class MinixClientService {
             event.next(reader.result);
           };
           reader.readAsText(blob);
-        }
+        },
+          (error: HttpErrorResponse) => {
+            this.inspectError(error.error);
+          }
       );
   }
 
@@ -77,8 +85,15 @@ export class MinixClientService {
       .subscribe(
         (message) => {
           console.log(message);
-        }
+        },
+          (error: HttpErrorResponse) => {
+            this.inspectError(error.error);
+          }
      );
+  }
+
+  private inspectError(error: {message: string}) {
+     this.errorCaught.next(error.message);
   }
 
   extractChildren(directory: Directory): BasicEntry[] {
@@ -87,12 +102,12 @@ export class MinixClientService {
       .map(this.toEntry);
   }
 
-  toEntry({ size, type, url, lastModified }: { size: number, type: string, url: string, lastModified: number }): BasicEntry {
+  toEntry({ size, type, url, lastModified, permissions, permissionsString, uid }): BasicEntry {
     const name = url.replace(/^.*[\\\/]/, '');
     const isDir = type === 'directory' ? true : false;
 
     const lastMDate = new Date(lastModified);
-    return new BasicEntry(name, url, isDir, size, lastMDate);
+    return new BasicEntry(name, url, isDir, size, lastMDate, permissions, permissionsString, uid);
   }
 
   get currentDir() {

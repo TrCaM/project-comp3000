@@ -6,6 +6,9 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrettySizeModule, PrettySizePipe } from 'angular-pretty-size';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -15,6 +18,8 @@ import { FileContentComponent } from './file-content/file-content.component';
 import { FileEntryComponent } from './entries-list/file-entry/file-entry.component';
 import { AceEditorModule } from 'ng2-ace-editor';
 import { FileToolbarComponent } from './file-content/file-toolbar/file-toolbar.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,6 +29,7 @@ import { FileToolbarComponent } from './file-content/file-toolbar/file-toolbar.c
     FileContentComponent,
     FileEntryComponent,
     FileToolbarComponent,
+    DialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,11 +38,16 @@ import { FileToolbarComponent } from './file-content/file-toolbar/file-toolbar.c
     SplitPaneModule,
     AceEditorModule,
     SharedModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [
-    MinixClientService,
+    MinixClientService
   ],
+  entryComponents: [DialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

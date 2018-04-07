@@ -1,0 +1,18 @@
+.dialog {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-column-gap: 10%;
+
+    img {
+        height: 10vw;
+        width: 10vw;
+        grid-column: auto / auto;
+        justify-self: left;
+    }
+
+    p {
+        grid-column: auto / auto;
+        justify-self: center;
+        font-size: 2vw;
+    }
+}

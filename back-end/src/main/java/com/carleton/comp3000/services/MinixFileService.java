@@ -38,7 +38,6 @@ public class MinixFileService {
     public MinixEntry getMinixEntry(String path) throws ChannelNotConnectedException, SftpException {
         ChannelSftp channel = getConnectedSftpChannel();
         MinixEntry entry = null;
-
         SftpATTRS stat = channel.stat(path);
 
         if (stat.isDir()) {
@@ -57,6 +56,9 @@ public class MinixFileService {
         file.setDownloadLink(uriInfo);
         file.setSize(stat.getSize());
         file.setLastModified(stat.getMTime() * 1000L);
+        file.setPermissions(stat.getPermissions());
+        file.setPermissionsString(stat.getPermissionsString());
+        file.setUid(stat.getUId());
         return file;
     }
 
@@ -66,11 +68,15 @@ public class MinixFileService {
 
         // Get the list of entries in the folder
         List<ShortEntry> entries = lsEntries.stream().map(e -> {
+        	SftpATTRS attr = e.getAttrs();
             String name = e.getFilename();
-            long size = e.getAttrs().getSize();
+            long size = attr.getSize();
             String url;
             String type;
-            long dateModify = e.getAttrs().getMTime() * 1000L;
+            int permissions = attr.getPermissions();
+            long dateModify = attr.getMTime() * 1000L;
+            String pString = attr.getPermissionsString();
+            int uid = attr.getUId();
             if (e.getAttrs().isDir()) {
                 url = uriInfo.getAbsolutePathBuilder().path(name).build().toString();
                 type = "directory";
@@ -78,13 +84,16 @@ public class MinixFileService {
                 url = uriInfo.getBaseUriBuilder().path(ContentFileResource.class).path(path).path(name).build().toString();
                 type = "file";
             }
-            return new ShortEntry(e.getFilename(), url, type, size, dateModify);
+            return new ShortEntry(e.getFilename(), url, type, size, dateModify, permissions, pString, uid);
         }).collect(Collectors.toList());
 
         MinixDirectory dir = new MinixDirectory(path, entries);
         dir.setSize(stat.getSize());
         dir.setLastModified(stat.getMTime() * 1000L);
         dir.setUrls(uriInfo);
+        dir.setPermissions(stat.getPermissions());
+        dir.setPermissionsString(stat.getPermissionsString());
+        dir.setUid(stat.getUId());
 
         return dir;
     }

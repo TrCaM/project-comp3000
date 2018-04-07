@@ -1,7 +1,5 @@
 package com.carleton.comp3000.models;
 
-import java.util.Date;
-
 public class ShortEntry {
     
     private String url;
@@ -9,13 +7,19 @@ public class ShortEntry {
     private String type;
     private long size;
     private long lastModified;
+    private int permissions;
+    private String permissionsString;
+    private int uid;
 
-    public ShortEntry(String name, String url, String type, long size, long lastM) {
+	public ShortEntry(String name, String url, String type, long size, long lastM, int permissions, String pString, int uid) {
         super();
         this.url = url;
         this.type = type;
         this.size = size;
         this.lastModified = lastM;
+        this.permissions = permissions;
+        this.permissionsString = pString;
+        this.uid = uid;
     }
     
     public String getName() {
@@ -57,6 +61,29 @@ public class ShortEntry {
 	public void setLastModified(long lastModified) {
 		this.lastModified = lastModified;
 	}
-    
-    
+
+	public int getPermissions() {
+		return permissions;
+	}
+
+	public void setPermissions(int permissions) {
+		this.permissions = permissions;
+	}
+
+	public String getPermissionsString() {
+		return permissionsString;
+	}
+
+	public void setPermissionsString(String permissionsString) {
+		this.permissionsString = permissionsString;
+	}
+
+    public int getUid() {
+		return uid;
+	}
+
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+
 }

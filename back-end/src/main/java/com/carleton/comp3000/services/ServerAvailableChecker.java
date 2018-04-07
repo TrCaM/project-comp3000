@@ -14,13 +14,11 @@ public class ServerAvailableChecker extends Observable implements Runnable {
 	private boolean available;
 	private ScheduledExecutorService exec;
 	private Future<?> future;
-	private boolean checkingRunning;
 
 	public ServerAvailableChecker() {
 		super();
 		this.available = false;
 		this.exec = Executors.newSingleThreadScheduledExecutor();
-		this.checkingRunning = false;
 	}
 
 	@Override
