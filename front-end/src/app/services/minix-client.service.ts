@@ -1,10 +1,10 @@
 import { File } from './../models/file.model';
-import { FileContentComponent } from './../file-content/file-content.component';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 // tslint:disable-next-line:import-blacklist
 import 'rxjs/Rx';
+import * as checker from 'istextorbinary';
 
 import { Directory } from './../models/directory.model';
 import { Entry } from '../models/entry.model';
@@ -18,6 +18,7 @@ export class MinixClientService {
   directoryFetched = new Subject();
   fileContentLoaded = new Subject<string>();
   errorCaught = new Subject<string>();
+  fileOpenConfirm = new Subject<string>();
 
   readonly baseDirUrl = 'http://localhost:8080/minix-web-service/webapi/files';
   readonly baseContentUrl = 'http://localhost:8080/minix-web-service/webapi/content';
@@ -32,7 +33,7 @@ export class MinixClientService {
 
   cd(url: string) {
     if (!this._currentDir || url !== this._currentDir.url) {
-      this.http.get<Directory>(url, {reportProgress: true})
+      this.http.get<Directory>(url, { reportProgress: true })
         .subscribe(
           (directory) => {
             this._currentDir = directory;
@@ -53,27 +54,27 @@ export class MinixClientService {
 
   loadContent() {
     const service = this;
-    this.http.get(this._openedFile.url, { responseType: 'blob'})
+    this.http.get(this._openedFile.url, { responseType: 'blob' })
       .subscribe(
         (blob: Blob) => {
-          const event = this.fileContentLoaded;
           const reader = new FileReader();
-          reader.onload = function () {
+          reader.onload =  () => {
             service._openedFile.content = reader.result;
-            event.next(reader.result);
+            this.fileContentLoaded.next(reader.result);
           };
           reader.readAsText(blob);
         },
-          (error: HttpErrorResponse) => {
-            this.inspectError(error.error);
-          }
+        (error: HttpErrorResponse) => {
+          this.inspectError(error.error);
+        }
       );
+
+
   }
 
   saveFileContent(fileContent: string) {
-    console.log('here');
     // Prepare the blob of file
-    const blob = new Blob([fileContent], {type: 'application/octet-stream'});
+    const blob = new Blob([fileContent], { type: 'application/octet-stream' });
     // Prepare form data object
     const formData = new FormData();
     formData.append('file', blob, this._openedFile.name);
@@ -81,19 +82,19 @@ export class MinixClientService {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'multipart/form-data');
     headers.append('Accept', 'application/json');
-    this.http.put(this._openedFile.url, formData, {headers: headers})
+    this.http.put(this._openedFile.url, formData, { headers: headers })
       .subscribe(
         (message) => {
           console.log(message);
         },
-          (error: HttpErrorResponse) => {
-            this.inspectError(error.error);
-          }
-     );
+        (error: HttpErrorResponse) => {
+          this.inspectError(error.error);
+        }
+      );
   }
 
-  private inspectError(error: {message: string}) {
-     this.errorCaught.next(error.message);
+  private inspectError(error: { message: string }) {
+    this.errorCaught.next(error.message);
   }
 
   extractChildren(directory: Directory): BasicEntry[] {
@@ -119,7 +120,7 @@ export class MinixClientService {
   }
 
   get currentFile() {
-    return {...this._openedFile};
+    return { ...this._openedFile };
   }
 
   get pathList(): string[] {

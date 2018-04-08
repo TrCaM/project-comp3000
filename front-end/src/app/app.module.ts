@@ -20,6 +20,8 @@ import { AceEditorModule } from 'ng2-ace-editor';
 import { FileToolbarComponent } from './file-content/file-toolbar/file-toolbar.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FileOpenDialogComponent } from './dialog/file-open-dialog/file-open-dialog.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FileEntryComponent,
     FileToolbarComponent,
     DialogComponent,
+    FileOpenDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,12 +45,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NgProgressModule.forRoot(),
     NgProgressHttpModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [
-    MinixClientService
+    MinixClientService,
   ],
-  entryComponents: [DialogComponent],
+  entryComponents: [DialogComponent, FileOpenDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
