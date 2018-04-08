@@ -1,8 +1,8 @@
 import { Subscription } from 'rxjs/Subscription';
-import { DialogComponent } from './dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { SSHClientService } from './services/ssh-client.service';
 import { Component } from '@angular/core';
+import { SSHClientService } from './core/services/ssh-client.service';
+import { DialogComponent } from './work-console/dialog/dialog.component';
 
 @Component({
   selector: 'app-root',

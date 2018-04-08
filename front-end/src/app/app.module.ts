@@ -1,5 +1,4 @@
 import { SharedModule } from './shared/shared.module';
-import { SSHClientService } from './services/ssh-client.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -10,43 +9,21 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 
 import { AppComponent } from './app.component';
-import { NavigationComponent } from './navigation/navigation.component';
-import { SplitPaneModule } from 'ng2-split-pane/lib/ng2-split-pane';
-import { EntriesListComponent } from './entries-list/entries-list.component';
-import { FileContentComponent } from './file-content/file-content.component';
-import { FileEntryComponent } from './entries-list/file-entry/file-entry.component';
-import { AceEditorModule } from 'ng2-ace-editor';
-import { FileToolbarComponent } from './file-content/file-toolbar/file-toolbar.component';
-import { DialogComponent } from './dialog/dialog.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FileOpenDialogComponent } from './dialog/file-open-dialog/file-open-dialog.component';
-import { LoginPageComponent } from './login-page/login-page.component';
+import { WorkConsoleModule } from './work-console/work-console.module';
+import { CoreModule } from './core/core.module';
+import { DialogComponent } from './work-console/dialog/dialog.component';
+import { FileOpenDialogComponent } from './work-console/dialog/file-open-dialog/file-open-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavigationComponent,
-    EntriesListComponent,
-    FileContentComponent,
-    FileEntryComponent,
-    FileToolbarComponent,
-    DialogComponent,
-    FileOpenDialogComponent,
-    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule,
-    SplitPaneModule,
-    AceEditorModule,
     SharedModule,
-    NgbModule.forRoot(),
-    NgProgressModule.forRoot(),
-    NgProgressHttpModule,
-  ],
-  providers: [
-    SSHClientService,
+    CoreModule,
+    WorkConsoleModule
   ],
   entryComponents: [DialogComponent, FileOpenDialogComponent],
   bootstrap: [AppComponent]

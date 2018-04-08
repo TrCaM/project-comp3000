@@ -1,0 +1,17 @@
+<ng-progress [direction]="'ltr+'" [min]="20" [max]="100" [speed]="300"  [trickleSpeed]="300"
+             [spinner]="true" [spinnerPosition]="'right'" [thick]="true" [meteor]="true"
+             [color]="'white'" [ease]="'linear'"></ng-progress>
+<div id="screen">
+    <div id="navigation">
+        <app-navigation></app-navigation>
+    </div>
+    
+    <div id="content">
+        <div class="left">
+            <app-entries-list></app-entries-list>
+        </div>
+        <div class="right">
+            <app-file-content></app-file-content> 
+        </div>
+    </div>
+</div>

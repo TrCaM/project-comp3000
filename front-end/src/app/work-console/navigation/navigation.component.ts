@@ -1,7 +1,7 @@
 // tslint:disable-next-line:import-blacklist
 import { Subscription } from 'rxjs';
-import { SSHClientService } from './../services/ssh-client.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import { SSHClientService } from '../../core/services/ssh-client.service';
 
 @Component({
   selector: 'app-navigation',

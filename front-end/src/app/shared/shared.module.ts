@@ -7,6 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgProgressModule } from '@ngx-progressbar/core';
+import { NgProgressHttpModule } from '@ngx-progressbar/http';
+import { FormsModule } from '@angular/forms';
 
 // Translate
 @NgModule({
@@ -17,7 +21,11 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    NgbModule.forRoot(),
+    NgProgressModule.forRoot(),
+    NgProgressHttpModule,
+    FormsModule
   ],
   exports: [
     CommonModule,
@@ -26,7 +34,11 @@ import { MatInputModule } from '@angular/material/input';
     BrowserAnimationsModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    NgbModule,
+    NgProgressModule,
+    NgProgressHttpModule,
+    FormsModule
   ],
   declarations: [FontSizeFixedDirective]
 })

@@ -1,6 +1,6 @@
-import { SSHClientService } from './../../services/ssh-client.service';
 import { Subject } from 'rxjs/Subject';
 import { Component, OnInit, Output, EventEmitter, Input, OnChanges } from '@angular/core';
+import { SSHClientService } from '../../../core/services/ssh-client.service';
 
 @Component({
   selector: 'app-file-toolbar',

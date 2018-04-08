@@ -1,7 +1,7 @@
-import { BasicEntry } from './../../models/basic-entry.model';
 import { Component, OnInit, Input } from '@angular/core';
-import { SSHClientService } from '../../services/ssh-client.service';
 import { PrettySizeService } from 'angular-pretty-size';
+import { BasicEntry } from '../../../core/models/basic-entry.model';
+import { SSHClientService } from '../../../core/services/ssh-client.service';
 
 @Component({
   selector: 'app-file-entry',

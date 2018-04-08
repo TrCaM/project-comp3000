@@ -1,3 +1,4 @@
+import { Status } from './../models/status.enum';
 import { File } from './../models/file.model';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
@@ -6,12 +7,12 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 import 'rxjs/Rx';
 import * as checker from 'istextorbinary';
 
-import { Directory } from './../models/directory.model';
-import { Entry } from '../models/entry.model';
-import { BasicEntry } from '../models/basic-entry.model';
 import { Subject } from 'rxjs/Subject';
 import { last } from 'rxjs/operators';
 import { MatDialog } from '@angular/material/dialog';
+import { Directory } from '../models/directory.model';
+import { BasicEntry } from '../models/basic-entry.model';
+import { Connection } from '../models/connection.model';
 
 @Injectable()
 export class SSHClientService {
@@ -20,15 +21,25 @@ export class SSHClientService {
   errorCaught = new Subject<string>();
   fileOpenConfirm = new Subject<string>();
 
-  readonly baseDirUrl = 'http://localhost:8080/ssh-web-service/webapi/files';
-  readonly baseContentUrl = 'http://localhost:8080/ssh-web-service/webapi/content';
+  readonly baseDirUrl = 'http://localhost:8080/minix-web-service/webapi/files';
+  readonly baseContentUrl = 'http://localhost:8080/minix-web-service/webapi/content';
 
   private _currentDir: Directory;
   private _openedFile: File;
   private _entries: BasicEntry[];
+  private _connectionStatus: Status;
 
   constructor(private http: HttpClient) {
     this.cd(this.baseDirUrl + '/');
+    this._connectionStatus = Status.DISCONNECTED;
+  }
+
+  login(info: Connection) {
+    return new Promise( (resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, 2000);
+    });
   }
 
   cd(url: string) {
@@ -125,5 +136,9 @@ export class SSHClientService {
 
   get pathList(): string[] {
     return this._currentDir.absolutePath.split('/').filter(seg => seg.length !== 0);
+  }
+
+  get connectionStatus(): Status {
+    return this._connectionStatus;
   }
 }

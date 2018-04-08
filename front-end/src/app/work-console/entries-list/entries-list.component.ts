@@ -1,8 +1,7 @@
-import { Directory } from './../models/directory.model';
-import { BasicEntry } from './../models/basic-entry.model';
-import { SSHClientService } from './../services/ssh-client.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs/Subscription';
+import { BasicEntry } from '../../core/models/basic-entry.model';
+import { SSHClientService } from '../../core/services/ssh-client.service';
 
 @Component({
   selector: 'app-entries-list',

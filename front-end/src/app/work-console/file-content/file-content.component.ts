@@ -1,14 +1,14 @@
-import { FileOpenDialogComponent } from './../dialog/file-open-dialog/file-open-dialog.component';
 import * as ace from 'brace';
-import '../../editor-modes';
+import '../../../editor-modes';
 import 'brace/theme/monokai';
 import 'brace/theme/clouds';
 
 import { Subscription } from 'rxjs/Subscription';
-import { SSHClientService } from './../services/ssh-client.service';
 import { Component, OnInit, ViewChild, AfterViewInit, OnDestroy, AfterContentInit } from '@angular/core';
 import { AceEditorComponent } from 'ng2-ace-editor';
 import { MatDialog } from '@angular/material/dialog';
+import { SSHClientService } from '../../core/services/ssh-client.service';
+import { FileOpenDialogComponent } from '../dialog/file-open-dialog/file-open-dialog.component';
 
 @Component({
   selector: 'app-file-content',
