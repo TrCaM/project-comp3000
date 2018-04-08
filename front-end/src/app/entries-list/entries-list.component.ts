@@ -1,8 +1,8 @@
 import { Directory } from './../models/directory.model';
 import { BasicEntry } from './../models/basic-entry.model';
-import { MinixClientService } from './../services/minix-client.service';
+import { SSHClientService } from './../services/ssh-client.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-entries-list',
@@ -13,14 +13,14 @@ export class EntriesListComponent implements OnInit, OnDestroy {
   directorySubcription: Subscription;
   entryList: BasicEntry[];
 
-  constructor(private minixClient: MinixClientService) { }
+  constructor(private sshClient: SSHClientService) { }
 
   ngOnInit() {
-    this.minixClient.directoryFetched.subscribe(this.onDirectoryFetched.bind(this));
+    this.sshClient.directoryFetched.subscribe(this.onDirectoryFetched.bind(this));
   }
 
   onDirectoryFetched() {
-    this.entryList = this.minixClient.entries;
+    this.entryList = this.sshClient.entries;
   }
 
   ngOnDestroy() {

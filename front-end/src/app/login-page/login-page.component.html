@@ -1,0 +1,48 @@
+<div class="page">
+
+  <h1>Connect To SSH Server</h1>
+
+  <form class="login-form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+
+    <mat-form-field class="host-name">
+      <input 
+        matInput 
+        type="url" 
+        placeholder="Host Name" 
+        name="hostName"
+        ngModel
+        required>
+    </mat-form-field>
+
+    <mat-form-field class="port">
+      <input
+        matInput type="number" 
+        placeholder="Port number" 
+        name="port"
+        ngModel
+        required>
+    </mat-form-field>
+
+    <mat-form-field class="username">
+      <input
+        matInput 
+        placeholder="Username" 
+        name="username"
+        ngModel
+        required>
+    </mat-form-field>
+
+    <mat-form-field class="password">
+      <input 
+        matInput 
+        type="password" 
+        placeholder="Password" 
+        name="password"
+        ngModel
+        required>
+    </mat-form-field>
+
+    <button type="submit" [disabled]="!f.valid">CONNECT</button>
+
+  </form>
+</div>

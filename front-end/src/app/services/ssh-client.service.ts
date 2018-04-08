@@ -20,8 +20,8 @@ export class SSHClientService {
   errorCaught = new Subject<string>();
   fileOpenConfirm = new Subject<string>();
 
-  readonly baseDirUrl = 'http://localhost:8080/ssh-web-service/webapi/files';
-  readonly baseContentUrl = 'http://localhost:8080/ssh-web-service/webapi/content';
+  readonly baseDirUrl = 'http://localhost:8080/minix-web-service/webapi/files';
+  readonly baseContentUrl = 'http://localhost:8080/minix-web-service/webapi/content';
 
   private _currentDir: Directory;
   private _openedFile: File;

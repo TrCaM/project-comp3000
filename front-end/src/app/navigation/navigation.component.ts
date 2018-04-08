@@ -1,6 +1,6 @@
 // tslint:disable-next-line:import-blacklist
 import { Subscription } from 'rxjs';
-import { MinixClientService } from './../services/minix-client.service';
+import { SSHClientService } from './../services/ssh-client.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
@@ -12,19 +12,19 @@ export class NavigationComponent implements OnInit, OnDestroy {
   directorySubscription: Subscription;
   pathList: string[];
 
-  constructor(private minixClient: MinixClientService) { }
+  constructor(private sshClient: SSHClientService) { }
 
   ngOnInit() {
-    this.directorySubscription = this.minixClient.directoryFetched.subscribe(
+    this.directorySubscription = this.sshClient.directoryFetched.subscribe(
       () => {
-        this.pathList = this.minixClient.pathList;
+        this.pathList = this.sshClient.pathList;
       }
     );
   }
 
   onClick(i) {
     const path = i < 0 ? '/' : ('/' + this.pathList.slice(0, i + 1).join('/'));
-    this.minixClient.cd(this.minixClient.baseDirUrl + path);
+    this.sshClient.cd(this.sshClient.baseDirUrl + path);
   }
 
   ngOnDestroy() {

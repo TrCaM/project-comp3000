@@ -1,7 +1,7 @@
 import { Subscription } from 'rxjs/Subscription';
 import { DialogComponent } from './dialog/dialog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { MinixClientService } from './services/minix-client.service';
+import { SSHClientService } from './services/ssh-client.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -12,9 +12,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   errorObserver: Subscription;
 
-  constructor(private minixClient: MinixClientService,
+  constructor(private sshClient: SSHClientService,
               private dialog: MatDialog) {
-    this.errorObserver = this.minixClient.errorCaught.subscribe(
+    this.errorObserver = this.sshClient.errorCaught.subscribe(
       (message: string) => {
         this.dialog.open(DialogComponent, {
           width: '70vh',

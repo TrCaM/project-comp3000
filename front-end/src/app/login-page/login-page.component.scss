@@ -1,0 +1,76 @@
+$color: #CB2128;
+.page {
+  height: 100%;
+  background-color: #F2F2F2;
+  color: $color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  h1 {
+    padding-bottom: 5vh;
+  }
+  form {
+    display: grid;
+    width: 50%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 70% 25%;
+    grid-column-gap: 5%;
+    font-size: 1.5rem;
+    .host-name {
+      grid-row: 1 / 1;
+      grid-column: 1 / 1;
+    }
+    .port {
+      grid-row: 1 / 1;
+      grid-column: 2 / 2;
+    }
+    .username {
+      grid-row: 2 / 2;
+      grid-column: 1 / span 2;
+    }
+    .password {
+      grid-row: 3 / 3;
+      grid-column: 1 / span 2;
+    }
+    button {
+      background: none;
+      width: 50vw;
+      justify-self: center;
+      border: 2px solid $color;
+      transition: 0.25s;
+      font: inherit;
+      line-height: 1;
+      margin: 0.5em;
+      padding: 1em 2em;
+      grid-row: 4 / 4;
+      grid-column: 1 / span 2;
+      color: #CB2128;
+    }
+    button:hover {
+      box-shadow: inset 50vw 0 0 0 adjust-hue($color, 10deg);
+      border-color: adjust-hue($color, 10deg);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.4;
+      cursor: no-drop;
+    }
+  }
+}
+
+/* When the input is focused */
+.mat-focused {
+  border: none;
+}
+
+.mat-focused .mat-input-placeholder {
+  color: $color;
+}
+
+.mat-focused .mat-input-wrapper .mat-input-underline .mat-input-ripple,
+{
+  border: 1px solid $color;
+}

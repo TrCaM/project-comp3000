@@ -1,4 +1,4 @@
-import { MinixClientService } from './../../services/minix-client.service';
+import { SSHClientService } from './../../services/ssh-client.service';
 import { Subject } from 'rxjs/Subject';
 import { Component, OnInit, Output, EventEmitter, Input, OnChanges } from '@angular/core';
 
@@ -12,7 +12,7 @@ export class FileToolbarComponent implements OnInit, OnChanges {
   @Output() clearClicked = new EventEmitter();
   @Output() saveClicked = new EventEmitter();
 
-  constructor(private minixClient: MinixClientService) { }
+  constructor(private sshClient: SSHClientService) { }
 
   ngOnInit() {
   }
@@ -29,6 +29,6 @@ export class FileToolbarComponent implements OnInit, OnChanges {
   }
 
   onReload() {
-    this.minixClient.loadContent();
+    this.sshClient.loadContent();
   }
 }

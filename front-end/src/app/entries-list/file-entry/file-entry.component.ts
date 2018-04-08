@@ -1,6 +1,6 @@
 import { BasicEntry } from './../../models/basic-entry.model';
 import { Component, OnInit, Input } from '@angular/core';
-import { MinixClientService } from '../../services/minix-client.service';
+import { SSHClientService } from '../../services/ssh-client.service';
 import { PrettySizeService } from 'angular-pretty-size';
 
 @Component({
@@ -14,7 +14,7 @@ export class FileEntryComponent implements OnInit {
   imgPath: string;
   sizeString: string;
 
-  constructor(private minixClient: MinixClientService,
+  constructor(private sshClient: SSHClientService,
               private prettyService: PrettySizeService) { }
 
   ngOnInit() {
@@ -25,9 +25,9 @@ export class FileEntryComponent implements OnInit {
 
   onSelect() {
     if (!this.entry.isDir) {
-        this.minixClient.fetchFile(this.entry);
+        this.sshClient.fetchFile(this.entry);
     } else {
-        this.minixClient.cd(this.entry.url);
+        this.sshClient.cd(this.entry.url);
     }
   }
 

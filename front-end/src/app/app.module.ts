@@ -1,5 +1,5 @@
 import { SharedModule } from './shared/shared.module';
-import { MinixClientService } from './services/minix-client.service';
+import { SSHClientService } from './services/ssh-client.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,7 +8,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PrettySizeModule, PrettySizePipe } from 'angular-pretty-size';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
-import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -21,7 +20,7 @@ import { FileToolbarComponent } from './file-content/file-toolbar/file-toolbar.c
 import { DialogComponent } from './dialog/dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FileOpenDialogComponent } from './dialog/file-open-dialog/file-open-dialog.component';
-import { MatButtonModule } from '@angular/material/button';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +32,7 @@ import { MatButtonModule } from '@angular/material/button';
     FileToolbarComponent,
     DialogComponent,
     FileOpenDialogComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,12 +44,9 @@ import { MatButtonModule } from '@angular/material/button';
     NgbModule.forRoot(),
     NgProgressModule.forRoot(),
     NgProgressHttpModule,
-    MatDialogModule,
-    BrowserAnimationsModule,
-    MatButtonModule
   ],
   providers: [
-    MinixClientService,
+    SSHClientService,
   ],
   entryComponents: [DialogComponent, FileOpenDialogComponent],
   bootstrap: [AppComponent]

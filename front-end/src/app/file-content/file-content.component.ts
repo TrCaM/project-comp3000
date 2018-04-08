@@ -5,7 +5,7 @@ import 'brace/theme/monokai';
 import 'brace/theme/clouds';
 
 import { Subscription } from 'rxjs/Subscription';
-import { MinixClientService } from './../services/minix-client.service';
+import { SSHClientService } from './../services/ssh-client.service';
 import { Component, OnInit, ViewChild, AfterViewInit, OnDestroy, AfterContentInit } from '@angular/core';
 import { AceEditorComponent } from 'ng2-ace-editor';
 import { MatDialog } from '@angular/material/dialog';
@@ -26,7 +26,7 @@ export class FileContentComponent implements OnInit, OnDestroy, AfterContentInit
   private shouldDirty: boolean;
   fileFetchedSubscription: Subscription;
 
-  constructor(private minixClient: MinixClientService,
+  constructor(private sshClient: SSHClientService,
     private dialog: MatDialog) { }
 
   ngOnInit() {
@@ -46,14 +46,14 @@ export class FileContentComponent implements OnInit, OnDestroy, AfterContentInit
   }
 
   ngAfterContentInit() {
-    this.fileFetchedSubscription = this.minixClient.fileContentLoaded.subscribe(this.onFileLoaded.bind(this));
+    this.fileFetchedSubscription = this.sshClient.fileContentLoaded.subscribe(this.onFileLoaded.bind(this));
   }
 
   async onFileLoaded(content: string) {
-    const file = this.minixClient.currentFile;
+    const file = this.sshClient.currentFile;
     if (await this.verifyFileContent(content)) {
       this.fileContent = content;
-      this.fileName = file.url.replace(this.minixClient.baseContentUrl, '');
+      this.fileName = file.url.replace(this.sshClient.baseContentUrl, '');
       this.fileOpen = true;
       this.editor.getEditor().focus();
       this.markClean();
@@ -119,7 +119,7 @@ export class FileContentComponent implements OnInit, OnDestroy, AfterContentInit
   }
 
   saveFile() {
-    this.minixClient.saveFileContent(this.fileContent);
+    this.sshClient.saveFileContent(this.fileContent);
     this.editor.getEditor().focus();
     this.dirty = false;
   }
