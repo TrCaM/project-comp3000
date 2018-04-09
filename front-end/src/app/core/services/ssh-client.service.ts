@@ -1,7 +1,7 @@
 import { Status } from './../models/status.enum';
 import { File } from './../models/file.model';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpErrorResponse, HttpRequest, HttpResponse } from '@angular/common/http';
 
 // tslint:disable-next-line:import-blacklist
 import 'rxjs/Rx';
@@ -23,6 +23,7 @@ export class SSHClientService {
 
   readonly baseDirUrl = 'http://localhost:8080/minix-web-service/webapi/files';
   readonly baseContentUrl = 'http://localhost:8080/minix-web-service/webapi/content';
+  readonly loginUrl = 'http://localhost:8080/minix-web-service/webapi/login';
 
   private _currentDir: Directory;
   private _openedFile: File;
@@ -30,19 +31,28 @@ export class SSHClientService {
   private _connectionStatus: Status;
 
   constructor(private http: HttpClient) {
-    this.cd(this.baseDirUrl + '/');
     this._connectionStatus = Status.DISCONNECTED;
   }
 
   login(info: Connection) {
-    return new Promise( (resolve, reject) => {
-      setTimeout(() => {
-        resolve();
-      }, 2000);
+    return new Promise((resolve, reject) => {
+      const req = new HttpRequest('POST', this.loginUrl, info, { reportProgress: false });
+      this.http.request(req).filter(x => x instanceof HttpResponse).subscribe(
+          (response: HttpResponse<any>) => {
+            console.log(response);
+            this._connectionStatus = Status.CONNECTED;
+            this.cd(this.baseDirUrl + '/');
+            resolve();
+          },
+          (error: HttpErrorResponse) => {
+            this.inspectError(error.error);
+          }
+      );
     });
   }
 
   cd(url: string) {
+    console.log(url);
     if (!this._currentDir || url !== this._currentDir.url) {
       this.http.get<Directory>(url, { reportProgress: true })
         .subscribe(
@@ -69,7 +79,7 @@ export class SSHClientService {
       .subscribe(
         (blob: Blob) => {
           const reader = new FileReader();
-          reader.onload =  () => {
+          reader.onload = () => {
             service._openedFile.content = reader.result;
             this.fileContentLoaded.next(reader.result);
           };

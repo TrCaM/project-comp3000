@@ -9,28 +9,33 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import com.carleton.comp3000.models.SessionInfo;
+
 public class ServerAvailableChecker extends Observable implements Runnable {
 
+	private SessionInfo session;
 	private boolean available;
 	private ScheduledExecutorService exec;
 	private Future<?> future;
 
-	public ServerAvailableChecker() {
+	public ServerAvailableChecker(SftpService service, SessionInfo info) {
 		super();
 		this.available = false;
 		this.exec = Executors.newSingleThreadScheduledExecutor();
+		this.session = info;
+		this.addObserver(service);
 	}
 
 	@Override
 	public void run() {
-		setAvailable(checkMinixServer());
+		setAvailable(checkServer());
 	}
 
-	public boolean checkMinixServer() {
+	public boolean checkServer() {
 		Socket socket = null;
 		boolean retVal = false;
 		try {
-			socket = new Socket("127.0.0.1", 2222);
+			socket = new Socket(session.getHostName(), session.getPort());
 			retVal = true;
 		} catch (UnknownHostException e) {
 			retVal = false;
@@ -66,7 +71,6 @@ public class ServerAvailableChecker extends Observable implements Runnable {
 
 	public synchronized void setAvailable(boolean available) {
 		this.available = available;
-//		System.out.println("setting");
 		if (available == false) {
 			setChanged();
 			notifyObservers();

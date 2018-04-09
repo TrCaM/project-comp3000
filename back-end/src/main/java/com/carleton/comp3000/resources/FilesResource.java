@@ -37,6 +37,7 @@ public class FilesResource {
         try {
             return minixService.getMinixEntry("/" + path);
         } catch (ChannelNotConnectedException e) {
+        	e.printStackTrace();
             Message message = new Message("Could not connect to the ssh server", 503);
             Response response = Response.status(503).entity(message).build();
             throw new WebApplicationException(response);

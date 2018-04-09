@@ -110,12 +110,11 @@ public class MinixFileService {
     }
 
     public InputStream getFileContent(String path) throws ChannelNotConnectedException, SftpException {
-    	ChannelSftp channel = service.getMinixChannel();
-        return channel.get(path);
+        return getConnectedSftpChannel().get(path);
     }
     
     public ChannelSftp getConnectedSftpChannel() throws ChannelNotConnectedException {
-        ChannelSftp channel = service.getMinixChannel();
+        ChannelSftp channel = service.getConnectedChannel();
         if (!channel.isConnected()) {
         	throw new ChannelNotConnectedException();
         }

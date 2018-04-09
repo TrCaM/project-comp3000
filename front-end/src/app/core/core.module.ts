@@ -2,6 +2,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SSHClientService } from './services/ssh-client.service';
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -9,9 +10,11 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     SharedModule,
+    AppRoutingModule
   ],
   exports: [
-      LoginPageComponent
+      LoginPageComponent,
+      AppRoutingModule
   ],
   providers: [
       SSHClientService

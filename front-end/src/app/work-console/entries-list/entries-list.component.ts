@@ -23,7 +23,9 @@ export class EntriesListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.directorySubcription.unsubscribe();
+    if (this.directorySubcription) {
+      this.directorySubcription.unsubscribe();
+    }
   }
 
 }

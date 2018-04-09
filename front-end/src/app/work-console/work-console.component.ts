@@ -1,4 +1,7 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { SSHClientService } from '../core/services/ssh-client.service';
+import { Status } from '../core/models/status.enum';
 
 @Component({
   selector: 'app-work-console',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkConsoleComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sshClient: SSHClientService,
+              private router: Router) { }
 
   ngOnInit() {
+    if (this.sshClient.connectionStatus === Status.DISCONNECTED) {
+      this.router.navigate(['login']);
+    }
   }
 
 }

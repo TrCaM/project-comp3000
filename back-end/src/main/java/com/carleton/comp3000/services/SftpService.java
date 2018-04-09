@@ -1,6 +1,7 @@
 package com.carleton.comp3000.services;
 
 import com.carleton.comp3000.exceptions.ChannelNotConnectedException;
+import com.carleton.comp3000.models.SessionInfo;
 import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
@@ -26,16 +27,16 @@ public class SftpService implements Observer {
 	public SftpService() {
 		this.jsch = new JSch();
 		status = States.NOT_CONNECTED;
-		checker = new ServerAvailableChecker();
-		checker.addObserver(this);
 	}
 	
-	public boolean openNewSession(String hostName, int port, String username, String password) {
+	public boolean openNewSession(SessionInfo info) {
+		clean();
+		this.checker = new ServerAvailableChecker(this, info);
 		checker.run();
-		if (checker.checkMinixServer()) {
+		if (checker.checkServer()) {
 			try {
-				session = jsch.getSession(username, hostName, port);
-				session.setPassword(password);
+				session = jsch.getSession(info.getUsername(), info.getHostName(), info.getPort());
+				session.setPassword(info.getPassword());
 
 				Properties config = new Properties();
 				config.put("StrictHostKeyChecking", "no");
@@ -83,7 +84,7 @@ public class SftpService implements Observer {
 	}
 
 	public ChannelSftp getConnectedChannel() throws ChannelNotConnectedException {
-		if (status != States.CONNECTED)
+		if (status != States.CONNECTED && !openSftpChannel() && channelSftp == null)
 			throw new ChannelNotConnectedException();
 
 		return this.channelSftp;
@@ -96,29 +97,14 @@ public class SftpService implements Observer {
 		}
 		this.status = States.NOT_CONNECTED;
 		this.channelSftp = null;
-		checker.stopCheck();
+		if (checker != null) 
+			checker.stopCheck();
 	}
 
 	public void clean() {
 		closeChannel();
 		closeSession();
 	}
-
-	public ChannelSftp getMinixChannel() throws ChannelNotConnectedException {
-		if (status == States.NOT_CONNECTED) {
-			connectToMinix();
-		}
-
-		return getConnectedChannel();
-	}
-
-	private void connectToMinix() {
-		clean();
-		openNewSession("localhost", 2222, "root", "Password");
-		openSftpChannel();
-	}
-
-
 
 	@Override
 	public void update(Observable o, Object arg) {
