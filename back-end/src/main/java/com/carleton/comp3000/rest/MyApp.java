@@ -14,6 +14,7 @@ import com.carleton.comp3000.services.SftpService;
 public class MyApp extends ResourceConfig {
 
 	public MyApp() {
+		System.out.println("Service is starting");
         packages("com.carleton.comp3000.resources",
                  "com.carleton.comp3000.readwrite",
                  "com.carleton.comp3000.enums",

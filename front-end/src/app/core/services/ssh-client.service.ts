@@ -18,7 +18,7 @@ import { Connection } from '../models/connection.model';
 export class SSHClientService {
   directoryFetched = new Subject();
   fileContentLoaded = new Subject<string>();
-  errorCaught = new Subject<string>();
+  errorCaught = new Subject();
   fileOpenConfirm = new Subject<string>();
 
   readonly baseDirUrl = 'http://localhost:8080/minix-web-service/webapi/files';
@@ -115,7 +115,7 @@ export class SSHClientService {
   }
 
   private inspectError(error: { message: string }) {
-    this.errorCaught.next(error.message);
+    this.errorCaught.next(error);
   }
 
   extractChildren(directory: Directory): BasicEntry[] {

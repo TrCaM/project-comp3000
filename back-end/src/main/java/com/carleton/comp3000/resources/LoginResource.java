@@ -28,6 +28,7 @@ public class LoginResource {
     @POST
     public Response login(SessionInfo info) throws WebApplicationException {
     	if (this.sftpService.openNewSession(info)){
+    		System.out.println("Opened session");
 			return Response.ok(info).build();
     	} else {
             Message message = new Message("Can't connect! Unauthorized", 401);
