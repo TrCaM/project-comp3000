@@ -1,5 +1,5 @@
 # Comp 3000 Project 
-## Tri & Spencer
+## Tri & Spencer / Group 58
 ### README.MD
 
 Files folders included: inside 3000-master (front-end, back-end,minix-web-service.war(Located in back-end file folder))
